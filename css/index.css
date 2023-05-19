@@ -1,73 +1,123 @@
-header {
-    display: flex;
-    height: 100px;
-    border: 5px;
-    border-color: black;
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Russo One;
+    font-size: 1rem;
+}
+
+header nav {
     background-color: rgb(113, 182, 182);
-    margin: 5px;
+    position: fixed;
+    width: 100%;
+    height: 100px;
 }
 
-.header-section-logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
+nav ul li.logo {
+    background-image: url(../img/logo-TWM.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 150px;
 }
 
-.logo-img{
+.logo-img {
     display: flex;
-    width: 100px;
+    width: 150px;
     height: 100;
     margin: 10px;
     padding: 10px;
 }
 
-.header-section-form{
-    display: flex;
-    width: 600px;
-    margin: 10px;
-    border: 5px;
-    border-color: aliceblue;
-    border-style: solid;
-    border-radius: 20px;
+nav {
+    overflow: hidden;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul.ul-logo {
+    float: left;
+}
+
+.ul-buscador{
+    display: center;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
-#search-form{
-    display: flex;
-    width: 400px;
-    align-items: center;
-    justify-content: center;
+nav ul.ul-menu {
+    float: right;
 }
 
-#search-input{
-    width: 400px;
-    font-family: "raleway", "sans-serif";
-    height: 30px;
-    margin-right: 5px;
-}
-
-#error-message{
-    color: brown;
-}
-
-.header-nav-ul{
-    display: flex;
+nav ul li {
+    margin: 0;
+    padding: 15px 12px 0 12px;
+    float: left;
     list-style-type: none;
-    flex-direction: row;
-    font-size: 30px;
-    font-family: "raleway", "sans-serif";
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    height: 60px;
 }
 
-.header-nav-link{
-    display: flex;
-    align-items: center;
-    margin: 25px;
-    text-decoration: none;
+nav ul li a {
     color: white;
 }
 
-.header-section-nav{
-    
+nav ul li.logo {
+    background-image: url(../img/dh.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 150px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.header-section-form {
+    display: flex;
+    width: 50%;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-form {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-input {
+    width: 400px;
+    font-family: "raleway", "sans-serif";
+    height: 30px;
+}
+
+#search-button {
+    height: 20px;
+    width: 15px;
+}
+
+#error-message {
+    color: brown;
 }

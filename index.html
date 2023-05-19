@@ -8,29 +8,31 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    <header>
-        <section class="header-section-logo">
-            <img  class="logo-img" src="./img/twm-logo.jpeg" alt="logoTwm">
-        </section>
-
-        <section class="header-section-form">
-            <form action="search results.html">
-                <input type="text" id="search-input" placeholder="Buscar...">
-                <button type="submit" id="search-button"><i class=""></i></button>
-            </form>
-            <div id="error-message"></div>
-        </section>
-
-        <section class="header-section-nav">
+    <div>
+        <header>
             <nav>
-                <ul class="header-nav-ul">
-                    <li><a class="header-nav-link" href="#home">Home</a></li>
-                    <li><a class="header-nav-link" href="./playlist.html">Playlist</a></li>
-                    <li><a class="header-nav-link" href="./genres.html"></a>Genres</li>
+                <ul class="ul-logo">
+                    <li class="logo"></li>
                 </ul>
+
+                <ul class="ul-buscador">
+                    <form action="search results.html">
+                        <input type="text" id="search-input" placeholder="Buscar...">
+                        <button type="submit" id="search-button"><i class=""></i></button>
+                    </form>
+                    <div id="error-message"></div>
+                </ul>
+
+                <ul class="ul-menu">
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="./playlist.html">Playlist</a></li>
+                  <li><a href="./genres.html">Genres</a></li>
+                </ul>
+              
             </nav>
-        </section>
-    </header>
+        </header>
+
+    </div>
 
     <script src="./js/index.js"></script>
 </body>
