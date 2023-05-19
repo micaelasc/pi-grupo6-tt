@@ -12,43 +12,35 @@
 <body>
     <div>
         <!-- HEADER  -->
+
         <header>
-            <nav>
-                <ul class="ul-logo">
-                    <li class="logo"></li>
-                </ul>
-
-                <ul class="ul-buscador">
-                    <form action="search results.html">
-                        <input type="text" id="search-input" placeholder="Buscar...">
-                        <button type="submit" id="search-button"><i class=""></i></button>
-                    </form>
-                    <div id="error-message"></div>
-                </ul>
-
-                <ul class="ul-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="./playlist.html">Playlist</a></li>
-                    <li><a href="./genres.html">Genres</a></li>
-                </ul>
-
-            </nav>
+            <section class="header-section-logo">
+                <img class="logo" src="./img/logo-mmm.png" alt="logoTwm">
+            </section>
+    
+            <section class="header-section-form">
+                <form action="search results.html">
+                    <input type="text" id="search-input" placeholder="Buscar...">
+                    <button type="submit" id="search-button"><i class=""></i></button>
+                </form>
+                <div id="error-message"></div>
+            </section>
+    
+            <section class="header-section-nav">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="./playlist.html">Playlist</a></li>
+                        <li><a href="./genres.html">Genres</a></li>
+                    </ul>
+                </nav>
+            </section>
         </header>
 
     
         <!-- FOOTER -->
     
-        <footer>
-            <ul class="ul-menu" type="none">
-                <li class="li-menu"><a class="color-green" href="#home">Home</a></li>
-                <li class="li-menu"><a class="color-green" href="#whatWeDo">Shoes</a></li>
-                <li class="li-menu"><a class="color-green" href="#products">Products</a></li>
-                <li class="li-menu"><a class="color-green" href="#contact">Contact</a></li>
-            </ul>
-            <div class="copyright">
-                <h2>Digital House &#169; 2023</h2>
-            </div>
-        </footer>
+
     </div>
 
     <script src="./js/index.js"></script>
