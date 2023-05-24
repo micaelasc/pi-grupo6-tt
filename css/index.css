@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(90, 219, 118);
+    background-image: url(../img/fondo-negro.jpeg);
     margin: 0;
     border: 0;
     padding: 0;
@@ -61,14 +61,6 @@ nav ul li a {
     color: rgb(8, 0, 0);
 }
 
-nav ul li.logo {
-    background-image: url(../img/dh.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    width: 150px;
-}
-
 nav ul li a {
     text-decoration: none;
 }
@@ -93,7 +85,7 @@ nav ul li a:hover {
 header {
     display: flex;
     height: 80px;
-    background-color: rgb(252, 253, 253);
+    background-color: #9c27b0;
     margin: 5px;
     -webkit-box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
     -moz-box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
@@ -119,7 +111,6 @@ header {
 .header-section-nav {
     display: flex;
     align-items: center;
-
 }
 
 #search-form {
@@ -144,9 +135,60 @@ header {
     color: brown;
 }
 
+.canciones {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+
+
+}
+
+.titulo {
+    background-color: white;
+    margin: 15px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.box-container {
+    background-color: #fff;
+    margin:  0px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.cajita-cancion{
+    height: 170px;
+    width: 150px;
+    background: #9c27b0;
+    text-align: center;
+    border-radius: 20px;
+    margin: 15px 2px;  
+}
+
+.box-container .h3{
+    font-size: 20px;
+    color: #9c27b0;
+}
+
+.cajita-cancion p {
+    padding: 0 15px;
+    font-size: 16px;
+}
+
 footer {
     margin: 5px;
-    background-color: white;
+    background-color: #9c27b0;
     -webkit-box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
     -moz-box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
     box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
@@ -158,6 +200,7 @@ footer ul {
     display: flex;
     justify-content: space-between;
 }
+
 .footer-section-form {
     display: flex;
     width: 50%;
