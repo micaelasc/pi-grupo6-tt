@@ -144,6 +144,48 @@ header {
     color: brown;
 }
 
+#modo-oscuro{
+    background-color:    white;
+    position:              relative;
+    width:                 70px;
+    height:                30px;
+    border-radius:         25px;
+    box-shadow:            inset 4px 4px 6px #cecece;
+    margin-top:            25px;
+    cursor:                pointer;
+
+}
+
+.boton-modo-oscuro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #c385ce ;
+    border-radius: 25px;
+    transform: scale(.7);
+    box-shadow: 3px 3px 8px rgb(125, 15, 165),
+                -3px -3px 8px rgb(235, 210, 245);
+}
+
+#modo-oscuro .active .boton-modo-oscuro{
+    left: 40px;
+}
+
+body .active {
+    background-image: url(../img/fondo-blanco.jpeg);
+    /* margin: 0;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Noto Sans JP', sans-serif; */
+}
+
+
+
+
 .canciones {
     display: flex;
     justify-items: center;
@@ -187,6 +229,13 @@ header {
     flex-direction: column;
     border-radius: 20px;
     margin: 15px 2px;  
+
+}
+
+.cajita-cancion:hover {
+    text-decoration: underline;
+    box-shadow: 10px 10px 9px -10px rgba(0, 0, 0, .8);
+    
 
 }
 
