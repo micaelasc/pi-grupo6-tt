@@ -5,7 +5,6 @@
 }
 
 
-
 body {
     background-image: url(../img/fondo-negro.jpeg);
     margin: 0;
@@ -16,9 +15,11 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+
+/* HEADER */
 .logo-img {
     display: flex;
-    width: 150px;
+    width: 100px;
     height: 100;
     margin: 10px;
     padding: 10px;
@@ -71,12 +72,9 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-
-
 .logo {
     width: 130px;
 }
-
 
 .header-section-form {
     display: flex;
@@ -122,17 +120,14 @@ header {
     width: 90%;
     align-items: center;
     justify-content: center;
-
 }
 
 #search-input {
     width: 500px;
     font-family: "garet", "sans-serif";
     height: 40px;
-    border-radius: 20px;
+    border-radius: 30px;
 }
-
-
 
 #search-button {
     border-radius: 20px;
@@ -140,39 +135,38 @@ header {
     width: 40px;
 }
 
-#error-message {
-    color: brown;
+/* MODO OSCURO MODO CLARO */
+#modo-oscuro {
+    background-color: white;
+    position: relative;
+    width: 70px;
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: inset 4px 4px 6px #cecece;
+    margin-top: 25px;
+    cursor: pointer;
 }
 
-#modo-oscuro{
-    background-color:    white;
-    position:              relative;
-    width:                 70px;
-    height:                30px;
-    border-radius:         25px;
-    box-shadow:            inset 4px 4px 6px #cecece;
-    margin-top:            25px;
-    cursor:                pointer;
-
-}
-
-.boton-modo-oscuro{
+.boton-modo-oscuro {
     position: absolute;
     top: 0;
     left: 0;
     width: 30px;
     height: 30px;
-    background-color: #c385ce ;
+    background-color: #c385ce;
     border-radius: 25px;
     transform: scale(.7);
     box-shadow: 3px 3px 8px rgb(125, 15, 165),
-                -3px -3px 8px rgb(235, 210, 245);
+        -3px -3px 8px rgb(235, 210, 245);
 }
 
-#modo-oscuro .active .boton-modo-oscuro{
+#modo-oscuro .active .boton-modo-oscuro {
     left: 40px;
 }
 
+
+
+/* BODY */
 body .active {
     background-image: url(../img/fondo-blanco.jpeg);
     /* margin: 0;
@@ -184,16 +178,12 @@ body .active {
 }
 
 
-
-
 .canciones {
     display: flex;
     justify-items: center;
     align-items: center;
     justify-content: space-between;
     padding: 30px;
-
-
 }
 
 .titulo {
@@ -204,12 +194,11 @@ body .active {
     align-items: center;
     height: 50px;
     border-radius: 20px;
-    
 }
 
 .box-container {
     background-color: #fff;
-    margin:  0px 60px;
+    margin: 0px 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -219,7 +208,7 @@ body .active {
     border-radius: 20px;
 }
 
-.cajita-cancion{
+.cajita-cancion {
     height: 170px;
     width: 150px;
     display: flex;
@@ -228,21 +217,17 @@ body .active {
     align-items: flex-start;
     flex-direction: column;
     border-radius: 20px;
-    margin: 15px 2px;  
-
+    margin: 15px 2px;
 }
 
 .cajita-cancion:hover {
     text-decoration: underline;
     box-shadow: 10px 10px 9px -10px rgba(0, 0, 0, .8);
-    
-
 }
 
-.box-container .h3{
+.box-container .h3 {
     font-size: 20px;
     color: #9c27b0;
-
 }
 
 .cajita-cancion p {
@@ -250,10 +235,9 @@ body .active {
     font-size: 10px;
     text-align: start;
     margin: 0%;
-
 }
 
-.cajita-cancion img{
+.cajita-cancion img {
     margin: 10px;
     display: flex;
     align-items: center;
@@ -262,15 +246,20 @@ body .active {
     width: 90px;
     border-radius: 20px;
 }
-.cajita-cancion h3{
+
+.cajita-cancion h3 {
     display: flex;
     text-align: start;
     align-items: flex-start;
     margin: 0%;
     padding: 0 15px;
     font-family: 'Noto Sans JP', sans-serif;
-}   
-footer{ 
+}
+
+
+
+/* FOOTER */
+footer {
     margin: 5px;
     background-color: #9c27b0;
     -webkit-box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
