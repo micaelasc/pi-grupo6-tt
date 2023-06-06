@@ -1,9 +1,9 @@
+/*------------------------------------- CSS GENERAL ---------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Russo+One');
 
 * {
     box-sizing: border-box;
 }
-
 
 body {
     background-image: url(../img/fondo-negro.jpeg);
@@ -15,8 +15,7 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-
-/* HEADER */
+/*------------------------------------- HEADER ---------------------------------------------------*/
 .logo-img {
     display: flex;
     width: 100px;
@@ -135,7 +134,7 @@ header {
     width: 40px;
 }
 
-/* MODO OSCURO MODO CLARO */
+/*----------- BOTON MODO OSCURO MODO CLARO --------*/
 #modo-oscuro {
     background-color: white;
     position: relative;
@@ -166,7 +165,7 @@ header {
 
 
 
-/* BODY */
+/* --------------------------- BODY ----------------------------------- */
 body .active {
     background-image: url(../img/fondo-blanco.jpeg);
     /* margin: 0;
@@ -178,7 +177,7 @@ body .active {
 }
 
 
-.canciones {
+.canciones {                        /* este justo no se que hace */
     display: flex;
     justify-items: center;
     align-items: center;
@@ -186,7 +185,8 @@ body .active {
     padding: 30px;
 }
 
-.titulo {
+/*--------------------------- TITULOS DEL BODY --------------------------------------------*/
+.tituloCancion {
     background-color: white;
     margin: 15px 60px;
     display: flex;
@@ -196,7 +196,34 @@ body .active {
     border-radius: 20px;
 }
 
-.box-container {
+.tituloAlbum {
+    background-color: white;
+    margin: 15px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.tituloArtista {
+    background-color: white;
+    margin: 15px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.box-container .h3 {   /*--- este tampoco se que hace bien -----*/
+    font-size: 20px;
+    color: #9c27b0;
+}
+
+/*-------------------------- SECTIONS --------------------------------------------*/
+/*-------------------------- SECTION CANCIONES ----------------------------------*/
+.box-container-canciones {
     background-color: #fff;
     margin: 0px 60px;
     display: flex;
@@ -208,6 +235,7 @@ body .active {
     border-radius: 20px;
 }
 
+/*--- ARTICLE CANCIONES -----*/
 .cajita-cancion {
     height: 170px;
     width: 150px;
@@ -223,11 +251,6 @@ body .active {
 .cajita-cancion:hover {
     text-decoration: underline;
     box-shadow: 10px 10px 9px -10px rgba(0, 0, 0, .8);
-}
-
-.box-container .h3 {
-    font-size: 20px;
-    color: #9c27b0;
 }
 
 .cajita-cancion p {
@@ -256,9 +279,121 @@ body .active {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+/*-------------------------- SECTION ALBUMES --------------------------------------------*/
+.box-container-albumes {
+    background-color: #fff;
+    margin: 0px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 20px;
+}
 
+/*--- ARTICLE ALBUMES -----*/
+.cajita-albumes {
+    height: 170px;
+    width: 150px;
+    display: flex;
+    background: #9c27b0;
+    text-align: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 15px 2px;
+}
 
-/* FOOTER */
+.cajita-albumes:hover {
+    text-decoration: underline;
+    box-shadow: 10px 10px 9px -10px rgba(0, 0, 0, .8);
+}
+
+.cajita-albumes p {
+    padding: 0 15px;
+    font-size: 10px;
+    text-align: start;
+    margin: 0%;
+}
+
+.cajita-albumes img {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 90px;
+    border-radius: 20px;
+}
+
+.cajita-albumes h3 {
+    display: flex;
+    text-align: start;
+    align-items: flex-start;
+    margin: 0%;
+    padding: 0 15px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/*-------------------------- SECTION ARTISTAS --------------------------------------------*/
+.box-container-artistas {
+    background-color: #fff;
+    margin: 0px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 20px;
+}
+
+/*--- ARTICLE ARTISTAS -----*/
+.cajita-artistas {
+    height: 170px;
+    width: 150px;
+    display: flex;
+    background: #9c27b0;
+    text-align: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 15px 2px;
+}
+
+.cajita-artistas:hover {
+    text-decoration: underline;
+    box-shadow: 10px 10px 9px -10px rgba(0, 0, 0, .8);
+}
+
+.cajita-artistas p {
+    padding: 0 15px;
+    font-size: 10px;
+    text-align: start;
+    margin: 0%;
+}
+
+.cajita-artistas img {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 90px;
+    border-radius: 20px;
+}
+
+.cajita-artistas h3 {
+    display: flex;
+    text-align: start;
+    align-items: flex-start;
+    margin: 0%;
+    padding: 0 15px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/*-------------------------- FOOTER --------------------------------------------*/
 footer {
     margin: 5px;
     background-color: #9c27b0;
@@ -281,3 +416,12 @@ footer ul {
     justify-content: center;
     align-items: center;
 }
+
+
+
+/*-------------------------- MEDIA QUERIES --------------------------------------------*/
+/*-------------------------- TELEFONO --------------------------------------------*/
+
+
+
+/*-------------------------- TABLET --------------------------------------------*/
