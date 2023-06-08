@@ -1,13 +1,13 @@
 //----------------------------------------- FORMULARIO -------------------------------------------------------------//
 
-let form = document.querySelector("#search-button"); //HTML button element
+let form = document.querySelector(".form"); //HTML form element
 let input = document.querySelector("#search-input"); //HTML input element
 
 // alert(input)
 // alert (form)
 
 form.addEventListener("submit", function (e) {
-    let busqueda = input.value.trim()
+    let busqueda = input.value
     if (busqueda.length < 3) {
         e.preventDefault();
         alert("Debes escribir por lo menos tres caracteres");
@@ -58,18 +58,18 @@ btnMode.addEventListener("click", function (e) {
 //---------------------------------------------- FETCHS -------------------------------------------------------------//
 //------------------------------------- FETCH CANCIONES DE LA API ---------------------------------------------------//
 
-fetch("https://api.allorigins.win/raw?url=" + "https://api.deezer.com/chart")
+fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart")
     .then(function (response) {
         return response.json()
     })
     .then(function (data) {
-        // console.log(data.tracks.data); //muestra las canciones sacados del API
+        console.log(data.tracks.data); //muestra las canciones sacados del API
         let canciones = document.querySelector(".box-container-canciones")
         for (let i = 0; i < 5; i++) {
             canciones.innerHTML += `
             <article class="cajita-cancion">
                 <img src="${data.tracks.data[i].album.cover}">
-                <a href="./detail-song.html?id=${data.tracks.data[i].id}"> 
+                 
                      <h3> ${data.tracks.data[i].title} </h3> 
                 </a>
                 <a href="./detail-artist.html?id=${data.tracks.data[i].artist.id}"> 
@@ -86,7 +86,7 @@ fetch("https://api.allorigins.win/raw?url=" + "https://api.deezer.com/chart")
 
 //------------------------------------- FETCH ALBUMES DE LA API ---------------------------------------------------//
 
-fetch("https://api.allorigins.win/raw?url=" + "https://api.deezer.com/chart/0/albums")
+fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart/0/albums")
     .then(function (response) {
         return response.json()
     })
@@ -113,7 +113,7 @@ fetch("https://api.allorigins.win/raw?url=" + "https://api.deezer.com/chart/0/al
 
 
 //------------------------------------- FETCH ARTISTAS DE LA API ---------------------------------------------------//
-fetch("https://api.allorigins.win/raw?url=" + "https://api.deezer.com/chart/0/artists")
+fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart/0/artists")
     .then(function (response) {
         return response.json()
     })

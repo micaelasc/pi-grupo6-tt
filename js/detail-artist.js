@@ -3,7 +3,8 @@ let queryString = location.search;
 let queryObj = new URLSearchParams (queryString)
 let id = queryObj.get("id")
 // console.log(id);
-let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists/" + id;
+let url = "https://cors-anywhere.herokuapp.com/" + "https://developers.deezer.com/api/artist " + id;
+console.log(url)
 
 
 fetch(url)
@@ -12,8 +13,8 @@ fetch(url)
     })
     .then(function (data) {
         console.log(data);
-        let imagenArtista = document.querySelector(".imagenArtista");
-        imagenArtista.src = data
+        // let imagenArtista = document.querySelector(".imagenArtista");
+        // imagenArtista.src = data
     })
     .catch(function(error){
         alert("Error" + error) 
