@@ -12,29 +12,46 @@ console.log(url)
 //fetch del album
 fetch(url)
     .then(function(response) {
-        return response.json()
+        return response.json()                            //decodifica la info y la convierte en array
     })
 
-    .then(function(data) {
+    .then(function(data) {                          //como el anterior es asincronico, hay que hacer este then con un callback, que recibe la info decodificada  
         console.log(data)
         let tituloalbum = document.querySelector(".nombreAlbum");                         //   busco en la api el nombre del album
         let artistaalbum = document.querySelector(".nombreArtistaDelAlbum");            //  busco en la api el nombbre del artista del album
         let imagenalbum = document.querySelector(".imagenAlbum");                               // busco en la api la imagen del album
-        let generoalbum = document.querySelector(".nombreGeneroAlbum")                    //busco en la api rl genero del album
-        // let fechaalbum = document.querySelector(".")                                    //busco en la api la fecha del album
+        let generoalbum = document.querySelector(".nombreGeneroAlbum")                   //busco en la api rl genero del album
+        let cancionesAlbum = document.querySelector(".listaAlbum")
+        let fechaalbum = document.querySelector(".publicacionAlbum")                                    //busco en la api la fecha del album
         tituloalbum.innerText = data.title;
         artistaalbum.innerText = data.artist.name;              // innerText para que lo muestre en la página
         imagenalbum.src = data.cover;
-        generoalbum.innerText = data.genres.data.name;
-        // fechaalbum.innerText = data.release_date;
+        generoalbum.innerText = data.genres.data[0].name;
+        fechaalbum.innerText = data.release_date;
     
-        // for (let i=0; i<5; i++){
-           // let imagenAlbum = document.querySelector(".imagenAlbum");
-            // imagenAlbum.src = data. 
-        // }
+        fetch("https://cors-anywhere.herokuapp.com/" + data.artist.tracklist)
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(data){
+                console.log(data)
+                for (let index = 0; index < data.data.length; index++) {
+                    cancionesAlbum.innerHTML +=  
+                    ` <li class = "listacancionesAlbum">
+                    ${data.data[index].title}
+                    </li>
+                    ` 
+                }
+            }
+
+            )
+            .catch(function(error){
+                alert("error" + error)
+            })
+ 
     })
     .catch(function(error){
-        alert("Error" + error) 
+        alert("Error" + error)                          // busca errores en el fetch
     })
 
 
