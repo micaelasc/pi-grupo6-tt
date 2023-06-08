@@ -1,7 +1,7 @@
 //------------------------------------- DETAIL ALBUM ---------------------------------------------------//
-let queryString = location.search;
-let queryObj = new URLSearchParams (queryString);
-let id = queryObj.get("id");
+let queryString = location.search;       // nos retorna la informacion en cadena de texto
+let queryObj = new URLSearchParams (queryString);    //define metodos utiles para trabajar con los parametros
+let id = queryObj.get("id");           // obtiene el valor de la clave dentro del querystring
 // console.log(id);
 let url = "https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/album/" + id;
 console.log(url)
@@ -57,7 +57,7 @@ fetch(url)
 
 
 
-    // buscador 
+// ------------------------------BUSCADOR--------------------------------------------------------------------------
 
 let form = document.querySelector(".form"); //HTML form element
 let input = document.querySelector("#search-input"); //HTML input element

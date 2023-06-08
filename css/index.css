@@ -19,7 +19,7 @@ body {
 .logo-img {
     display: flex;
     width: 100px;
-    height: 100;
+    height: 100;                     /* el logo */
     margin: 10px;
     padding: 10px;
 }
@@ -34,9 +34,9 @@ nav ul {
     text-align: center;
 }
 
-nav ul.ul-logo {
-    float: left;
-}
+/* nav ul.ul-logo {
+    float: left;                                  /*sacaar
+} */
 
 .ul-buscador {
     display: center;
@@ -45,9 +45,9 @@ nav ul.ul-logo {
     width: 100%;
 }
 
-nav ul.ul-menu {
-    float: right;
-}
+/* nav ul.ul-menu {
+    float: right;                               /*sacaar
+} */
 
 nav ul li {
     margin: 0;
@@ -246,6 +246,7 @@ body .active {
     flex-direction: column;
     border-radius: 20px;
     margin: 15px 2px;
+
 }
 
 .cajita-cancion:hover {
@@ -303,6 +304,7 @@ body .active {
     flex-direction: column;
     border-radius: 20px;
     margin: 15px 2px;
+    overflow: hidden;                /*dejarlo hasta que cambiemos la letra*/
 }
 
 .cajita-albumes:hover {
@@ -397,8 +399,8 @@ body .active {
 footer {
     margin: 5px;
     background-color: #9c27b0;
-    -webkit-box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
-    -moz-box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
+    /* -webkit-box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8); */                       /*preguntar mora*/
     box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
 }
 

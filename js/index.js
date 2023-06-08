@@ -77,7 +77,7 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart")  
             canciones.innerHTML += `
             <article class="cajita-cancion">
                 <img src="${data.tracks.data[i].album.cover}">
-                 
+                 <a href="./detail-song.html?id=${data.tracks.data[i].id}">
                      <h3> ${data.tracks.data[i].title} </h3> 
                 </a>
                 <a href="./detail-artist.html?id=${data.tracks.data[i].artist.id}"> 
