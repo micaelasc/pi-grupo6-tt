@@ -1,34 +1,51 @@
 //------------------------------------- DETAIL ARTIST ---------------------------------------------------//
 let queryString = location.search;
-let queryObj = new URLSearchParams (queryString)
+let queryObj = new URLSearchParams(queryString)
 let id = queryObj.get("id")
 // console.log(id);
-let url = "https://cors-anywhere.herokuapp.com/" + "https://developers.deezer.com/api/artist " + id;
+let url = "https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/artist/" + id;
 console.log(url)
 
 
+
+
+//fetch del artista
 fetch(url)
     .then(function (response) {
         return response.json()
     })
     .then(function (data) {
         console.log(data);
-        // let imagenArtista = document.querySelector(".imagenArtista");
-        // imagenArtista.src = data
-    })
-    .catch(function(error){
-        alert("Error" + error) 
-    })
+        // foto artista
+        let imagenArtista = document.querySelector(".imagenArtista");
+        imagenArtista.src = data.picture
 
-    
-// detail artista + sus albumes
-fetch()
-    .then(function(response) {
-        return response.json()
-    })
-    .then(function(data) {
-        
-    })
-    .catch(function(error){
-        alert("Error" + error) 
+        // nombre artista
+        let nombreArtista = document.querySelector(".nombreArtista")
+        nombreArtista.innerHTML = data.name
+
+        // fetch para maximo 5 albumes del artista PEDIR AYUDA
+        fetch("https://cors-anywhere.herokuapp.com/" + data.tracklist)
+            .then(function (response) {
+                return response.json()
+            })
+            .then(function (data) {
+                console.log(data)
+                let albumesArtista = document.querySelector(".listaArtistaAlbumes")
+                for (let i = 0; i <= data.length; i++) {
+                    albumesArtista.innerHTML += `
+                    <li class= "listitaArtistaAlbumes">
+                    ${datadata[i].album.title}
+                    </li>
+                    `
+                }
+            })
+            .catch(function (error) {
+                alert("Error" + error)
+            })
+
+
+        })
+    .catch(function (error) {
+        alert("Error" + error)
     })
