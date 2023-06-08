@@ -45,6 +45,11 @@ btnMode.addEventListener("click", function (e) {
         bodyTitulosCancion.style.backgroundColor = "#fff"
         bodyTitulosAlbum.style.backgroundColor = "#fff"
         bodyTitulosArtista.style.backgroundColor = "#fff"
+        
+        bodyTitulosCancion.style.color = "black"
+        bodyTitulosAlbum.style.color = "black"
+        bodyTitulosArtista.style.color = "black"
+
         bodyContainerCanciones.style.backgroundColor = "#fff"
         bodyContainerAlbumes.style.backgroundColor = "#fff"
         bodyContainerArtistas.style.backgroundColor = "#fff"
@@ -54,6 +59,11 @@ btnMode.addEventListener("click", function (e) {
         bodyTitulosCancion.style.backgroundColor = "#313131"
         bodyTitulosAlbum.style.backgroundColor = "#313131"
         bodyTitulosArtista.style.backgroundColor = "#313131"
+
+        bodyTitulosCancion.style.color = "white"
+        bodyTitulosAlbum.style.color = "white"
+        bodyTitulosArtista.style.color = "white"
+
         bodyContainerCanciones.style.backgroundColor = "#313131"
         bodyContainerAlbumes.style.backgroundColor = "#313131"
         bodyContainerArtistas.style.backgroundColor = "#313131"

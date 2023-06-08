@@ -21,7 +21,7 @@ fetch(url)
         imagenAlbumDeCancion.src = data.album.cover
         nombreCancion.innerText = data.title
         nombreArtistaDeCancion.innerText = data.artist.name
-        nombreAlbumDeCancion,innerText = data.album.title
+        nombreAlbumDeCancion.innerText = data.album.title
         
 
 

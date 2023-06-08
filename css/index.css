@@ -427,3 +427,53 @@ footer ul {
 
 
 /*-------------------------- TABLET --------------------------------------------*/
+
+
+
+
+
+
+/*-------------------------- DETAILS -----------------------------------------------------------*/
+/*-------------------------- DETAIL ALBUM (falta flexibilidad)--------------------------------------*/
+.nombreAlbum{
+    color: white;
+}
+
+.nombreArtistaDelAlbum{
+    color: white;
+}
+
+/* .imagenAlbum{
+
+} */
+
+.nombreGeneroAlbum{
+    color: white;
+}
+
+.listaAlbum{
+    color: white;
+}
+
+.publicacionAlbum{
+    color: white;
+}
+
+
+/*-------------------------- DETAIL CANCION (falta flexibilidad)--------------------------------------*/
+.nombreCancion{
+    color: white;
+}
+
+.nombreArtistaDeCancion{
+    color: white;
+}
+
+.nombreAlbumDeCancion{
+    color: white;
+}
+
+/*-------------------------- DETAIL ARTISTA (falta flexibilidad)--------------------------------------*/
+.nombreArtista{
+    color: white;
+}
