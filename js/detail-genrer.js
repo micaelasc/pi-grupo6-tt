@@ -4,7 +4,8 @@ let id = queryObj.get("id")
 console.log(id);
 
 // detail info de genre
-fetch()
+url = 
+fetch(url)
     .then(function(response) {
         return response.json()
     })
