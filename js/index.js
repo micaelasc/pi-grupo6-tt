@@ -20,9 +20,9 @@ form.addEventListener("submit", function (e) {
     }
 
 })
-form.addEventListener("input", function(e){
+form.addEventListener("input", function (e) {
     let busqueda = input.value
-    if(busqueda.length >= 3){                                               //cuando escribir más de 3 caracteres cambia el color de busqueda
+    if (busqueda.length >= 3) {                                               //cuando escribir más de 3 caracteres cambia el color de busqueda
         btnserch.style.background = "#009966"
     }
 
@@ -45,7 +45,7 @@ btnMode.addEventListener("click", function (e) {
         bodyTitulosCancion.style.backgroundColor = "#fff"
         bodyTitulosAlbum.style.backgroundColor = "#fff"
         bodyTitulosArtista.style.backgroundColor = "#fff"
-        
+
         bodyTitulosCancion.style.color = "black"
         bodyTitulosAlbum.style.color = "black"
         bodyTitulosArtista.style.color = "black"
@@ -104,11 +104,11 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart")  
 
 //------------------------------------- FETCH ALBUMES DE LA API ---------------------------------------------------//
 
-fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart/0/albums")
+fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart/0/albums")     // ruta de donde queremos obtener la info
     .then(function (response) {
-        return response.json()
+        return response.json()                     // callback para procesar el resultado, decodifica el json
     })
-    .then(function (data) {
+    .then(function (data) {                    // lo convierte en un parametro
         console.log(data.data); //muestra los albumes sacados del API
         let albumes = document.querySelector(".box-container-albumes")
         for (let i = 0; i < 5; i++) {
@@ -126,16 +126,16 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart/0/a
         }
     })
     .catch(function (error) {
-        alert("Error" + error)
+        alert("Error" + error)                  // para atrapar los errores en cualquier parte del fetch
     })
 
 
 //------------------------------------- FETCH ARTISTAS DE LA API ---------------------------------------------------//
-fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart/0/artists")
+fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart/0/artists")        // ruta de donde queremos obtener la info
     .then(function (response) {
-        return response.json()
+        return response.json()                     // callback para procesar el resultado, decodifica el json
     })
-    .then(function (data) {
+    .then(function (data) {                     // lo convierte en un parametro
         console.log(data.data); //muestra las canciones sacadas del API
         let canciones = document.querySelector(".box-container-artistas")
         for (let i = 0; i < 5; i++) {
@@ -150,5 +150,5 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart/0/a
         }
     })
     .catch(function (error) {
-        alert("Error" + error)
+        alert("Error" + error)                               // para atrapar los errores en cualquier parte del fetch
     })

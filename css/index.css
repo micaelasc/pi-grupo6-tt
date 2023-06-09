@@ -421,6 +421,109 @@ footer ul {
 
 
 
+
+/*-------------------------- DETAILS -----------------------------------------------------------*/
+/*-------------------------- DETAIL ALBUM (falta flexibilidad)--------------------------------------*/
+
+.detalle-del-album{
+    display: flex;
+    background-color: #9c27b0;
+    height: 1800px;
+    width: 500px;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 15px 2px;
+    overflow: hidden;    
+}
+.imagenAlbum{
+    padding: 20px 0px 0px 20px;
+}
+.nombreAlbum{
+    color: white;
+    padding: 0px 0px 0px 20px;
+}
+
+.nombreArtistaDelAlbum{
+    color: white;
+    padding: 0px 0px 0px 20px;
+}
+
+
+.nombreGeneroAlbum{
+    color: white;
+    padding: 0px 0px 0px 20px;
+}
+
+.listaAlbum li{
+    color: white;
+    padding: 0px 0px 0px 20px;
+}
+
+.publicacionAlbum{
+    color: white;
+    padding: 0px 0px 0px 20px;
+}
+
+
+/*-------------------------- DETAIL CANCION (falta flexibilidad)--------------------------------------*/
+.detalle-de-cancion{
+    display: flex;
+    background-color: #9c27b0;
+    height: 400px;
+    width: 500px;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 15px 2px;
+    overflow: hidden;    
+}
+.imagenAlbumDeCancion{
+    padding: 20px 0px 0px 20px;
+
+}
+.nombreCancion{
+    color: white;
+    padding: 0px 0px 0px 20px;
+}
+
+.nombreArtistaDeCancion{
+    color: white;
+    padding: 0px 0px 0px 20px;
+}
+
+.nombreAlbumDeCancion{
+    color: white;
+    padding: 0px 0px 0px 20px;
+}
+
+/*-------------------------- DETAIL ARTISTA (falta flexibilidad)--------------------------------------*/
+.detalle-del-artista{
+    display: flex;
+    background-color: #9c27b0;
+    height: 400px;
+    width: 500px;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 15px 2px;
+    overflow: hidden;    
+}
+.imagenArtista{
+    padding: 20px 0px 0px 20px;
+
+}
+.nombreArtista{
+    padding: 20px 0px 0px 20px;
+    color: white;
+}
+.listaArtistaAlbumes{
+    color: #fff;
+}
+
+
+
+
 /*-------------------------- MEDIA QUERIES --------------------------------------------*/
 /*-------------------------- TELEFONO --------------------------------------------*/
 
@@ -432,48 +535,3 @@ footer ul {
 
 
 
-
-/*-------------------------- DETAILS -----------------------------------------------------------*/
-/*-------------------------- DETAIL ALBUM (falta flexibilidad)--------------------------------------*/
-.nombreAlbum{
-    color: white;
-}
-
-.nombreArtistaDelAlbum{
-    color: white;
-}
-
-/* .imagenAlbum{
-
-} */
-
-.nombreGeneroAlbum{
-    color: white;
-}
-
-.listaAlbum{
-    color: white;
-}
-
-.publicacionAlbum{
-    color: white;
-}
-
-
-/*-------------------------- DETAIL CANCION (falta flexibilidad)--------------------------------------*/
-.nombreCancion{
-    color: white;
-}
-
-.nombreArtistaDeCancion{
-    color: white;
-}
-
-.nombreAlbumDeCancion{
-    color: white;
-}
-
-/*-------------------------- DETAIL ARTISTA (falta flexibilidad)--------------------------------------*/
-.nombreArtista{
-    color: white;
-}
