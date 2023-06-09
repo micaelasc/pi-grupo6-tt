@@ -1,33 +1,64 @@
 //------------------------------------- DETAIL SONG ---------------------------------------------------//
 let queryString = location.search;               // nos retorna la informacion en cadena de texto
-let queryObj = new URLSearchParams (queryString);        //define metodos utiles para trabajar con los parametros
+let queryObj = new URLSearchParams(queryString);        //define metodos utiles para trabajar con los parametros
 let id = queryObj.get("id");           // obtiene el valor de la clave dentro del querystring
 // console.log(id);
 let url = "https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/track/" + id;
 console.log(url)
 
 fetch(url)
-    .then(function(response) {
+    .then(function (response) {
         return response.json()                            //decodifica la info y la convierte en array
     })
 
-    .then(function(data) {                          //como el anterior es asincronico, hay que hacer este then con un callback, que recibe la info decodificada  
+    .then(function (data) {                          //como el anterior es asincronico, hay que hacer este then con un callback, que recibe la info decodificada  
         console.log(data)
         let imagenAlbumDeCancion = document.querySelector(".imagenAlbumDeCancion")
-        let nombreCancion = document.querySelector(".nombreCancion")
-        let nombreArtistaDeCancion = document.querySelector(".nombreArtistaDeCancion")
-        let nombreAlbumDeCancion = document.querySelector(".nombreAlbumDeCancion")
-
         imagenAlbumDeCancion.src = data.album.cover
+        let nombreCancion = document.querySelector(".nombreCancion")
         nombreCancion.innerText = data.title
+        let nombreArtistaDeCancion = document.querySelector(".nombreArtistaDeCancion")
         nombreArtistaDeCancion.innerText = data.artist.name
+        let nombreAlbumDeCancion = document.querySelector(".nombreAlbumDeCancion")
         nombreAlbumDeCancion.innerText = data.album.title
-        
+        /*--------------------------------------GUARDAR EN FAVORITOS---------------------------------------------------------- */
+
+        let favoritos = [];             /* Crear un array vacio para luego ser completado con lo que trae localStorage */
+        let recuperoStorage = localStorage.getItem("favoritos");   /* Recuperar localStorage de la key "favoritos" */
+        if (recuperoStorage != null) {                        /* Preguntar si es distinto de nulo para ver si tiene info */
+            favoritos = JSON.parse(recuperoStorage)
+        }
+        let btnFav = document.querySelector(".btnFav") /* Recurperar el elemento del DOM */
+        if (favoritos.includes(id)) {
+            btnFav.innerText = "quitar de playlist"       /* preguntar si el array favoritos incluye este ID - si lo incluye cambiar el texto a quitar de favoritos*/
+        }
 
 
- 
+
+
+
+
+        /* agregar el evento click a el boton de Fav - preguntar si el array de favoritos inlcuye el ID del personaje*/
+        btnFav.addEventListener("click", function () {
+            if (favoritos.includes(id)) {
+                /* TRUE */
+                let index = favoritos.indexOf(id)                                  /*si esxiste es porque ya estaba agragado y hay que sacarlo*/
+                favoritos.splice(index, 1);
+                btnFav.innerText = "agregar a favoritos"
+            } else {
+                /*FALSE */
+                favoritos.push(id);
+                btnFav.innerText = "sacar de favoritos"
+            }
+
+            let favoritosToString = JSON.stringify(favoritos);      /*Pasa FAVORITOS a JSON y lo sube a localStorage */
+            localStorage.setItem("favoritos", favoritosToString)
+
+        })
+
+
     })
-    .catch(function(error){
+    .catch(function (error) {
         alert("Error" + error)                          // busca errores en el fetch
     })
 
@@ -61,9 +92,9 @@ form.addEventListener("submit", function (e) {
     }
 
 })
-form.addEventListener("input", function(e){
+form.addEventListener("input", function (e) {
     let busqueda = input.value
-    if(busqueda.length >= 3){                                               //cuando escribir más de 3 caracteres cambia el color de busqueda
+    if (busqueda.length >= 3) {                                               //cuando escribir más de 3 caracteres cambia el color de busqueda
         btnserch.style.background = "#009966"
     }
 
@@ -86,7 +117,7 @@ btnMode.addEventListener("click", function (e) {
         bodyTitulosCancion.style.backgroundColor = "#fff"
         bodyTitulosAlbum.style.backgroundColor = "#fff"
         bodyTitulosArtista.style.backgroundColor = "#fff"
-        
+
         bodyTitulosCancion.style.color = "black"
         bodyTitulosAlbum.style.color = "black"
         bodyTitulosArtista.style.color = "black"
