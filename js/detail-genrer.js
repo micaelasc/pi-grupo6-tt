@@ -1,9 +1,9 @@
 let queryString = location.search;
 let queryObj = new URLSearchParams(queryString)
 let id = queryObj.get("id")
+console.log(queryString);
+console.log(queryObj);
 console.log(id);
-
-
 
 //------------------------------------- GENEROS ---------------------------------------------------//
 fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/genre")        // ruta de donde queremos obtener la info
@@ -12,17 +12,14 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/genre")  
     })
     .then(function (data) {            // lo convierte en un parametro
         console.log(data); //muestra las canciones sacados del API
-       let dataGenero = data.data[i].name
+        let dataGenero = document.querySelector(".dataGenero")
+        dataGenero.innerText = data.data[i].name
     })
     .catch(function (error) {
         alert("Error" + error) // para atrapar los errores en cualquier parte del fetch
     })
 
-//-----------------------------------BUSCO LOS ARTISTAS----------------------------------------------------------------------------------
-
-// for (let i = 0; i < data.lengt; i++) {
-   
-    
+//-----------------------------------BUSCA LOS ARTISTAS----------------------------------------------------------------------------------
 
 fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/genre/" + id + "/artists")
     .then(function (response) {
@@ -30,47 +27,27 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/genre/" +
     })
     .then(function (data) {
         console.log(data);
-        // foto artista
-        // let imagenArtista = document.querySelector(".imagenArtista");
-        // imagenArtista.src = data.picture
 
-        // // nombre artista
-        // let nombreArtista = document.querySelector(".nombreArtista")
-        // nombreArtista.innerHTML = data.name
+        let generoArtista = document.querySelector(".generoArtista");
+        let artistasGenero = "";
+
+        for (let i = 0; i < data.data.length; i++) {
+            artistasGenero += `
+                <li>
+                    <a href= "detail-artist.html?id=${data.data[i].id}">
+                        <h2 class="artistaGeneroNombre">${data.data[i].name}</h2> 
+                        <img class="artistaGeneroFoto" src="${data.data[i].picture}">
+                    </a>
+                </li>
+            
+            ` // falta poner las clases
+        }
+        generoArtista.innerHTML = artistasGenero; 
 
         })
     .catch(function (error) {
         alert("Error" + error)
     })
-
-// }
-
-// termino de probar
-
-// fetch(url)
-//     .then(function(response) {
-//         return response.json()
-//     })
-//     .then(function(data) {
-//         console.log()
-//     })
-//     .catch(function(error){
-//         alert("Error" + error) 
-//     })
-
-// // detail artistas que forman parte de ese genero
-// fetch()
-//     .then(function(response) {
-//         return response.json()
-//     })
-//     .then(function(data) {
-
-//     })
-//     .catch(function(error){
-//         alert("Error" + error) 
-//     })
-
-
 
 //----------------------------------------- FORMULARIO -------------------------------------------------------------//
 

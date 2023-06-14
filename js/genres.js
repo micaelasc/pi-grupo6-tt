@@ -4,7 +4,7 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/genre")  
         return response.json()   // callback para procesar el resultado, decodifica el json
     })
     .then(function (data) {            // lo convierte en un parametro
-        console.log(data); //muestra las canciones sacados del API
+        console.log(data);             //muestra los generos sacados del API
         let cajaGeneros = document.querySelector(".cajaGeneros")
         for (let i = 0; i < data.data.length; i++) {
             cajaGeneros.innerHTML += `
