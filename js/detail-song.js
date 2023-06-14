@@ -21,48 +21,39 @@ fetch(url)
         nombreArtistaDeCancion.innerText = data.artist.name
         let nombreAlbumDeCancion = document.querySelector(".nombreAlbumDeCancion")
         nombreAlbumDeCancion.innerText = data.album.title
-        /*--------------------------------------GUARDAR EN FAVORITOS---------------------------------------------------------- */
-
-        let favoritos = [];             /* Crear un array vacio para luego ser completado con lo que trae localStorage */
-        let recuperoStorage = localStorage.getItem("favoritos");   /* Recuperar localStorage de la key "favoritos" */
-        if (recuperoStorage != null) {                        /* Preguntar si es distinto de nulo para ver si tiene info */
-            favoritos = JSON.parse(recuperoStorage)
-        }
-        let btnFav = document.querySelector(".btnFav") /* Recurperar el elemento del DOM */
-        if (favoritos.includes(id)) {
-            btnFav.innerText = "quitar de playlist"       /* preguntar si el array favoritos incluye este ID - si lo incluye cambiar el texto a quitar de favoritos*/
-        }
-
-
-
-
-
-
-        /* agregar el evento click a el boton de Fav - preguntar si el array de favoritos inlcuye el ID del personaje*/
-        btnFav.addEventListener("click", function () {
-            if (favoritos.includes(id)) {
-                /* TRUE */
-                let index = favoritos.indexOf(id)                                  /*si esxiste es porque ya estaba agragado y hay que sacarlo*/
-                favoritos.splice(index, 1);
-                btnFav.innerText = "agregar a favoritos"
-            } else {
-                /*FALSE */
-                favoritos.push(id);
-                btnFav.innerText = "sacar de favoritos"
-            }
-
-            let favoritosToString = JSON.stringify(favoritos);      /*Pasa FAVORITOS a JSON y lo sube a localStorage */
-            localStorage.setItem("favoritos", favoritosToString)
-
-        })
-
-
+       
     })
     .catch(function (error) {
         alert("Error" + error)                          // busca errores en el fetch
     })
 
+ /*--------------------------------------GUARDAR EN FAVORITOS---------------------------------------------------------- */
 
+ let favoritos = [];             /* Crear un array vacio para luego ser completado con lo que trae localStorage */
+ let recuperoStorage = localStorage.getItem("favoritos");   /* Recuperar localStorage de la key "favoritos" */
+ if (recuperoStorage != null) {                        /* Preguntar si es distinto de nulo para ver si tiene info */
+     favoritos = JSON.parse(recuperoStorage)
+ }
+ let btnFav = document.querySelector(".btnFav") /* Recurperar el elemento del DOM */
+ if (favoritos.includes(id)) {
+     btnFav.innerText = "quitar de playlist"       /* preguntar si el array favoritos incluye este ID - si lo incluye cambiar el texto a quitar de favoritos*/
+ }
+ /* agregar el evento click a el boton de Fav - preguntar si el array de favoritos inlcuye el ID del personaje*/
+ btnFav.addEventListener("click", function () {
+     if (favoritos.includes(id)) {
+         /* TRUE */
+         let index = favoritos.indexOf(id)                                  /*si esxiste es porque ya estaba agragado y hay que sacarlo*/
+         favoritos.splice(index, 1);
+         btnFav.innerText = "agregar a favoritos"
+     } else {
+         /*FALSE */
+         favoritos.push(id);
+         btnFav.innerText = "sacar de favoritos"
+     }
+
+     let favoritosToString = JSON.stringify(favoritos);      /*Pasa FAVORITOS a JSON y lo sube a localStorage */
+     localStorage.setItem("favoritos", favoritosToString)
+ })
 
 
 
