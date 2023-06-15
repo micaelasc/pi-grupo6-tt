@@ -13,11 +13,18 @@ fetch(url)
     resultadoBusqueda.innerText = `Los resultados para ${busqueda} son: `
     let listaDeBusqueda = document.querySelector(".listaDeBusqueda")
     for (let i = 0; i < data.data.length; i++) {
-        resultadoBusqueda.innerHTML += ` <article class="cancionBusqueda"
-            <img src="${data.data[i].album.cover}"alt='' />
-            <a href="detail-song.html?id=${data.data[i].id}"><h4>${data.data[i].title}</h4></a>
-            <a href="detail-artist.html?id=${data.data[i].artist.name}"><h5>${data.data[i].artist.name}</h5></a>
-            <a href="detail-album.html?id=${data.data[i].album.id}"><h5>${data.data[i].album.title}</h5></a>
+        resultadoBusqueda.innerHTML += ` 
+            <article class="cancionBusqueda"
+                <img src="${data.data[i].album.cover}"alt='' />
+                <a href="detail-song.html?id=${data.data[i].id}">
+                    <h4>${data.data[i].title}</h4>
+                </a>
+                <a href="detail-artist.html?id=${data.data[i].artist.name}">
+                    <h5>${data.data[i].artist.name}</h5>
+                </a>
+                <a href="detail-album.html?id=${data.data[i].album.id}">
+                    <h5>${data.data[i].album.title}</h5>
+                </a>
             </article>
         `
         }
@@ -25,21 +32,6 @@ fetch(url)
 .catch(function(error){
     alert("Error" + error)  
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //--------------------------------------------BUSCADOR-----------------------------------------------------------------------------------

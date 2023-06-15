@@ -61,9 +61,6 @@ nav ul li {
 
 nav ul li a {
     color: rgb(8, 0, 0);
-}
-
-nav ul li a {
     text-decoration: none;
 }
 
@@ -423,8 +420,7 @@ footer ul {
 
 
 /*-------------------------- DETAILS -----------------------------------------------------------*/
-/*-------------------------- DETAIL ALBUM (falta flexibilidad)--------------------------------------*/
-
+/*-------------------------- DETAIL ALBUM --------------------------------------*/
 .detalle-del-album{
     display: flex;
     background-color: #9c27b0;
@@ -449,7 +445,6 @@ footer ul {
     padding: 0px 0px 0px 20px;
 }
 
-
 .nombreGeneroAlbum{
     color: white;
     padding: 0px 0px 0px 20px;
@@ -465,8 +460,7 @@ footer ul {
     padding: 0px 0px 0px 20px;
 }
 
-
-/*-------------------------- DETAIL CANCION (falta flexibilidad)--------------------------------------*/
+/*-------------------------- DETAIL CANCION --------------------------------------*/
 .detalle-de-cancion{
     display: flex;
     background-color: #9c27b0;
@@ -497,7 +491,7 @@ footer ul {
     padding: 0px 0px 0px 20px;
 }
 
-/*-------------------------- DETAIL ARTISTA (falta flexibilidad)--------------------------------------*/
+/*-------------------------- DETAIL ARTISTA --------------------------------------*/
 .detalle-del-artista{
     display: flex;
     background-color: #9c27b0;
@@ -521,10 +515,183 @@ footer ul {
     color: #fff;
 }
 
+/*--------------------------  GENRES  --------------------------------------*/
+.tituloGeneros{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+.cajaGeneros{
+    display: flex;
+    background-color: #9c27b0;
+    height: 800px;
+    width: 1400px;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 20px;
+    margin: 15px 2px;
+    overflow: hidden;
+}
+
+.cajita-generos{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.fotitoGeneros{
+    margin: auto;
+}
+/*-------------------------- DETAIL GENRES (falta hacer)--------------------------------------*/
+
+
+
+
+/*-------------------------- PLAYLIST --------------------------------------*/
+.tituloPlaylist{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tituloFav{
+    color: white;
+}
+
+#lista{
+    display: flex;
+    background-color: #9c27b0;
+    height: 400px;
+    width: 900px;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    border-radius: 20px;
+    margin: 15px 2px;
+    overflow: scroll;  
+}
+
+.cajita-playlist{
+
+}
+
+.titulitoPlaylist{
+
+}
+
+.nombreArtistaPlaylist{
+
+}
+
+/*-------------------------- SEARCH-RESULTS (falta hacer)--------------------------------------*/
+
 
 
 
 /*-------------------------- MEDIA QUERIES --------------------------------------------*/
 /*-------------------------- TELEFONO --------------------------------------------*/
+@media (max-width: 450px){
+    body{
+        max-width: 450 px;
+    }
 
+    main{
+        width: 100 vw;
+    }
+
+    header{
+        max-height: 13vh;
+        width: 100vw;
+    }
+
+    #search-input {
+        width: 10vw;
+        justify-content: center;
+        margin: auto;
+    }
+
+    #search-button{
+        margin: auto;
+    }
+    .form{
+        align-items: center;
+        justify-content: space-around;
+    } 
+    nav {
+        margin: auto;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    nav ul li {
+        font-size: 0.5rem;
+        margin: auto;
+        padding: 5px;
+        width: 70px;
+        height: 30px;
+    }
+    nav ul li a{
+        width: 30vw;
+    }
+    .header-section-nav{
+        width: 30vw;
+        margin: auto;
+    }
+    .header-section-form{
+        width: 30vw;
+        margin: 0;
+    }
+    #modo-oscuro{
+        width: 10vw;
+    }
+
+    .tituloCancion{
+        width: 80vw;
+        align-content: center;
+        align-self: center;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .box-container-canciones{
+        width: 80vw;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .tituloAlbum{
+        width: 80vw;
+        align-content: center;
+        align-self: center;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .box-container-albumes{
+        width: 80vw;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .tituloArtista{
+        width: 80vw;
+        align-content: center;
+        align-self: center;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .box-container-artistas{
+        width: 80vw;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+}
 

@@ -31,10 +31,10 @@ if (favoritos == null || favoritos.length == 0) {
         .then(function(data) {
             console.log(data);
 
-            cancionesFavoritos += `<article>
+            cancionesFavoritos += `<article class="cajita-playlist">
                                         <img src=${data.album.cover} alt='' />
-                                        <p> ${data.title}</p>
-                                        <p> ${data.artist.name} </p>
+                                        <p class="titulitoPlaylist"> ${data.title}</p>
+                                        <p class="nombreArtistaPlaylist"> ${data.artist.name} </p>
                                         
                                         <a href='detail-song.html?id=${data.id}'>Ver más</a>
                                     </article>`;

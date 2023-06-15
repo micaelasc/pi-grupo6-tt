@@ -9,7 +9,7 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/genre")  
         for (let i = 0; i < data.data.length; i++) {
             cajaGeneros.innerHTML += `
             <article class="cajita-generos">
-                <img src="${data.data[i].picture}">
+                <img class="fotitoGeneros" src="${data.data[i].picture}">
                  <a href="./detail-genrer.html?id=${data.data[i].id}">
                      <h3> ${data.data[i].name} </h3> 
                 </a>
