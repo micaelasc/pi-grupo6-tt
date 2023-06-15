@@ -43,7 +43,7 @@ if (favoritos == null || favoritos.length == 0) {
             
         })
         .catch(function(error) {
-            console.log(error);
+            alert("Error" + error)
         });
         
     }

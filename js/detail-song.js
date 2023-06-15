@@ -10,7 +10,6 @@ fetch(url)
     .then(function (response) {
         return response.json()                            //decodifica la info y la convierte en array
     })
-
     .then(function (data) {                          //como el anterior es asincronico, hay que hacer este then con un callback, que recibe la info decodificada  
         console.log(data)
         let imagenAlbumDeCancion = document.querySelector(".imagenAlbumDeCancion")
@@ -21,7 +20,6 @@ fetch(url)
         nombreArtistaDeCancion.innerText = data.artist.name
         let nombreAlbumDeCancion = document.querySelector(".nombreAlbumDeCancion")
         nombreAlbumDeCancion.innerText = data.album.title
-       
     })
     .catch(function (error) {
         alert("Error" + error)                          // busca errores en el fetch

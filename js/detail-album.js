@@ -35,10 +35,10 @@ fetch(url)
             })
             .then(function(data){
                 console.log(data)
-                for (let index = 0; index < data.data.length; index++) {
+                for (let i = 0; i < data.data.length; i++) {
                     cancionesAlbum.innerHTML +=  
                     ` <li class = "listacancionesAlbum">
-                    ${data.data[index].title}
+                    <a href="detail-song.html?id=${data.data[i].id}">${data.data[i].title}
                     </li>
                     ` 
                 }
