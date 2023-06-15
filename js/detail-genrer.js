@@ -40,7 +40,7 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/genre/" +
                     </a>
                 </li>
             
-            ` // falta poner las clases
+            ` 
         }
         generoArtista.innerHTML = artistasGenero; 
 
