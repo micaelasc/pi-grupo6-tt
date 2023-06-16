@@ -11,7 +11,7 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/genre")  
             <article class="cajita-generos">
                 <img class="fotitoGeneros" src="${data.data[i].picture}">
                  <a href="./detail-genrer.html?id=${data.data[i].id}">
-                     <h3> ${data.data[i].name} </h3> 
+                     <h3 class="generitos"> ${data.data[i].name} </h3> 
                 </a>
             </article>
             `
@@ -21,7 +21,6 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/genre")  
         alert("Error" + error) // para atrapar los errores en cualquier parte del fetch
     })
 // ------------------------------BUSCADOR--------------------------------------------------------------------------
-
 let form        = document.querySelector(".form"); //HTML form element
 let input       = document.querySelector("#search-input"); //HTML input element
 let btnserch    = document.querySelector("#search-button") // HTML boton de buscar
@@ -44,47 +43,29 @@ form.addEventListener("input", function (e) {
     if (busqueda.length >= 3) {                                               //cuando escribir más de 3 caracteres cambia el color de busqueda
         btnserch.style.background = "#009966"
     }
-
 })
-//----------------------------------------- BOTON MODO OSCURO MODO CLARO ---------------------------------------------------//
-
+//---------------------------------- BOTON MODO OSCURO MODO CLARO en genres---------------------------------------------------//
 let btnMode                 = document.querySelector("#modo-oscuro");
 let body                    = document.querySelector("body");
-let bodyTitulosCancion      = document.querySelector(".tituloCancion");
-let bodyTitulosAlbum        = document.querySelector(".tituloAlbum");
-let bodyTitulosArtista      = document.querySelector(".tituloArtista");
-let bodyContainerCanciones  = document.querySelector(".box-container-canciones");
-let bodyContainerAlbumes    = document.querySelector(".box-container-albumes");
-let bodyContainerArtistas   = document.querySelector(".box-container-artistas");
+// let cajaGeneros             = document.querySelector(".cajaGeneros"); // es la section
+let cajitaGeneros           = document.querySelector(".cajita-generos");
+let tituloGeneros           = document.querySelector(".tituloGeneros");
+let generitos               = document.querySelector(".generitos");
 
 btnMode.addEventListener("click", function (e) {
     if (btnMode.innerText                           == "Modo Oscuro") {
         body.style.background                       = "#313131";
-        bodyTitulosCancion.style.backgroundColor    = "#fff"
-        bodyTitulosAlbum.style.backgroundColor      = "#fff"
-        bodyTitulosArtista.style.backgroundColor    = "#fff"
+        tituloGeneros.style.color                   = "white"
+        // cajitaGeneros.style.color              = "#9c27b0" // me tira un cannot read properties of null ?!?!?!?!?
+        // generitos.style.color                       = "white"
 
-        bodyTitulosCancion.style.color              = "black"
-        bodyTitulosAlbum.style.color                = "black"
-        bodyTitulosArtista.style.color              = "black"
-
-        bodyContainerCanciones.style.backgroundColor    = "#fff"
-        bodyContainerAlbumes.style.backgroundColor      = "#fff"
-        bodyContainerArtistas.style.backgroundColor     = "#fff"
         this.innerText                                  = "Modo Claro";
     } else {
         body.style.background                       = "#fff";
-        bodyTitulosCancion.style.backgroundColor    = "#313131"
-        bodyTitulosAlbum.style.backgroundColor      = "#313131"
-        bodyTitulosArtista.style.backgroundColor    = "#313131"
+        tituloGeneros.style.color                   = "black"
+        // cajitaGeneros.style.color              = "magenta"
+        // generitos.style.color                       = "black"
 
-        bodyTitulosCancion.style.color  = "white"
-        bodyTitulosAlbum.style.color    = "white"
-        bodyTitulosArtista.style.color  = "white"
-
-        bodyContainerCanciones.style.backgroundColor    = "#313131"
-        bodyContainerAlbumes.style.backgroundColor      = "#313131"
-        bodyContainerArtistas.style.backgroundColor     = "#313131"
         this.innerText                                  = "Modo Oscuro";
     }
 })

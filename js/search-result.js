@@ -11,7 +11,7 @@ fetch(url)
         console.log(data)
         let resultadoBusqueda = document.querySelector(".resultadoBusqueda")
         resultadoBusqueda.innerText = `Los resultados para ${busqueda} son: `
-        let listaDeBusqueda = document.querySelector(".listaDeBusqueda")
+        let listaDeBusqueda = document.querySelector(".listaDeBusqueda")  //que hace esto, no lo llamamos en ningun lado
         for (let i = 0; i < data.data.length; i++) {
             resultadoBusqueda.innerHTML += ` 
             <article class="cancionBusqueda"
@@ -56,47 +56,26 @@ form.addEventListener("input", function (e) {
     if (busqueda.length >= 3) {                                               //cuando escribir más de 3 caracteres cambia el color de busqueda
         btnserch.style.background = "#009966"
     }
-
 })
-//----------------------------------------- BOTON MODO OSCURO MODO CLARO ---------------------------------------------------//
-
+//------------------------------------ BOTON MODO OSCURO MODO CLARO en results---------------------------------------------------//
 let btnMode                 = document.querySelector("#modo-oscuro");
 let body                    = document.querySelector("body");
-let bodyTitulosCancion      = document.querySelector(".tituloCancion");
-let bodyTitulosAlbum        = document.querySelector(".tituloAlbum");
-let bodyTitulosArtista      = document.querySelector(".tituloArtista");
-let bodyContainerCanciones  = document.querySelector(".box-container-canciones");
-let bodyContainerAlbumes    = document.querySelector(".box-container-albumes");
-let bodyContainerArtistas   = document.querySelector(".box-container-artistas");
+let resultadoBusqueda       = document.querySelector(".resultadoBusqueda");
+let cancionBusqueda       = document.querySelector(".cancionBusqueda");
+
 
 btnMode.addEventListener("click", function (e) {
     if (btnMode.innerText                           == "Modo Oscuro") {
         body.style.background                       = "#313131";
-        bodyTitulosCancion.style.backgroundColor    = "#fff"
-        bodyTitulosAlbum.style.backgroundColor      = "#fff"
-        bodyTitulosArtista.style.backgroundColor    = "#fff"
+        resultadoBusqueda.style.color               = "white"
+        cancionBusqueda.style.background            = "magenta" //tira null tambien .. que esta pasandooooooooo
 
-        bodyTitulosCancion.style.color              = "black"
-        bodyTitulosAlbum.style.color                = "black"
-        bodyTitulosArtista.style.color              = "black"
-
-        bodyContainerCanciones.style.backgroundColor    = "#fff"
-        bodyContainerAlbumes.style.backgroundColor      = "#fff"
-        bodyContainerArtistas.style.backgroundColor     = "#fff"
         this.innerText                                  = "Modo Claro";
     } else {
         body.style.background                       = "#fff";
-        bodyTitulosCancion.style.backgroundColor    = "#313131"
-        bodyTitulosAlbum.style.backgroundColor      = "#313131"
-        bodyTitulosArtista.style.backgroundColor    = "#313131"
+        resultadoBusqueda.style.color               = "black"
+        cancionBusqueda.style.background            = "#9c27b0"
 
-        bodyTitulosCancion.style.color  = "white"
-        bodyTitulosAlbum.style.color    = "white"
-        bodyTitulosArtista.style.color  = "white"
-
-        bodyContainerCanciones.style.backgroundColor    = "#313131"
-        bodyContainerAlbumes.style.backgroundColor      = "#313131"
-        bodyContainerArtistas.style.backgroundColor     = "#313131"
         this.innerText                                  = "Modo Oscuro";
     }
 })

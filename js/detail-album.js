@@ -7,8 +7,6 @@ let url = "https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/album
 console.log(url)
 
 
-
-
 //fetch del album
 fetch(url)
     .then(function (response) {
@@ -17,17 +15,17 @@ fetch(url)
 
     .then(function (data) {                          //como el anterior es asincronico, hay que hacer este then con un callback, que recibe la info decodificada  
         console.log(data)
-        let tituloalbum         = document.querySelector(".nombreAlbum");                         //   busco en la api el nombre del album
-        let artistaalbum        = document.querySelector(".nombreArtistaDelAlbum");            //  busco en la api el nombbre del artista del album
-        let imagenalbum         = document.querySelector(".imagenAlbum");                               // busco en la api la imagen del album
-        let generoalbum         = document.querySelector(".nombreGeneroAlbum")                   //busco en la api rl genero del album
+        let tituloAlbum         = document.querySelector(".nombreAlbum");                         //   busco en la api el nombre del album
+        let artistaAlbum        = document.querySelector(".nombreArtistaDelAlbum");            //  busco en la api el nombbre del artista del album
+        let imagenAlbum         = document.querySelector(".imagenAlbum");                               // busco en la api la imagen del album
+        let generoAlbum         = document.querySelector(".nombreGeneroAlbum")                   //busco en la api rl genero del album
         let cancionesAlbum      = document.querySelector(".listaAlbum")
-        let fechaalbum          = document.querySelector(".publicacionAlbum")                                    //busco en la api la fecha del album
-        tituloalbum.innerText   = data.title;
-        artistaalbum.innerText  = data.artist.name;              // innerText para que lo muestre en la página
-        imagenalbum.src         = data.cover;
-        generoalbum.innerText   = data.genres.data[0].name;
-        fechaalbum.innerText    = data.release_date;
+        let fechaAlbum          = document.querySelector(".publicacionAlbum")                                    //busco en la api la fecha del album
+        tituloAlbum.innerText   = data.title;
+        artistaAlbum.innerText  = data.artist.name;              // innerText para que lo muestre en la página
+        imagenAlbum.src         = data.cover;
+        generoAlbum.innerText   = data.genres.data[0].name;
+        fechaAlbum.innerText    = data.release_date;
 
         fetch("https://cors-anywhere.herokuapp.com/" + data.artist.tracklist)
             .then(function (response) {
@@ -42,8 +40,7 @@ fetch(url)
                     </li>
                     `
                 }
-            }
-            )
+            })
             .catch(function (error) {
                 alert("error" + error)
             })
@@ -78,45 +75,37 @@ form.addEventListener("input", function (e) {
 
 })
 
-//----------------------------------------- BOTON MODO OSCURO MODO CLARO ---------------------------------------------------//
+//---------------------------------- BOTON MODO OSCURO MODO CLARO en detail album---------------------------------------------------//
 
 let btnMode                 = document.querySelector("#modo-oscuro");
 let body                    = document.querySelector("body");
-let bodyTitulosCancion      = document.querySelector(".tituloCancion");
-let bodyTitulosAlbum        = document.querySelector(".tituloAlbum");
-let bodyTitulosArtista      = document.querySelector(".tituloArtista");
-let bodyContainerCanciones  = document.querySelector(".box-container-canciones");
-let bodyContainerAlbumes    = document.querySelector(".box-container-albumes");
-let bodyContainerArtistas   = document.querySelector(".box-container-artistas");
+let cajaAlbum               = document.querySelector(".detalle-del-album");
+let tituloAlbum             = document.querySelector(".nombreAlbum");
+let artistaAlbum            = document.querySelector(".nombreArtistaDelAlbum");
+let generoAlbum             = document.querySelector(".nombreGeneroAlbum");
+let fechaAlbum              = document.querySelector(".publicacionAlbum");
+let listaAlbum          = document.querySelector(".listaAlbum");
 
 btnMode.addEventListener("click", function (e) {
     if (btnMode.innerText                           == "Modo Oscuro") {
         body.style.background                       = "#313131";
-        bodyTitulosCancion.style.backgroundColor    = "#fff"
-        bodyTitulosAlbum.style.backgroundColor      = "#fff"
-        bodyTitulosArtista.style.backgroundColor    = "#fff"
-
-        bodyTitulosCancion.style.color              = "black"
-        bodyTitulosAlbum.style.color                = "black"
-        bodyTitulosArtista.style.color              = "black"
-
-        bodyContainerCanciones.style.backgroundColor    = "#fff"
-        bodyContainerAlbumes.style.backgroundColor      = "#fff"
-        bodyContainerArtistas.style.backgroundColor     = "#fff"
+        cajaAlbum.style.background                  = "magenta"
+        tituloAlbum.style.color                     = "black"
+        artistaAlbum.style.color                    = "black"
+        generoAlbum.style.color                     = "black"
+        fechaAlbum.style.color                      = "black"
+        listaAlbum.style.color                  = "black" //quiero cambiar el color de los numeritos
+        
         this.innerText                                  = "Modo Claro";
     } else {
         body.style.background                       = "#fff";
-        bodyTitulosCancion.style.backgroundColor    = "#313131"
-        bodyTitulosAlbum.style.backgroundColor      = "#313131"
-        bodyTitulosArtista.style.backgroundColor    = "#313131"
+        cajaAlbum.style.background                  = "#9c27b0"
+        tituloAlbum.style.color                     = "white"
+        artistaAlbum.style.color                    = "white"
+        generoAlbum.style.color                     = "white"
+        fechaAlbum.style.color                      = "white"
+        listaAlbum.style.color                  = "white" // no se como
 
-        bodyTitulosCancion.style.color  = "white"
-        bodyTitulosAlbum.style.color    = "white"
-        bodyTitulosArtista.style.color  = "white"
-
-        bodyContainerCanciones.style.backgroundColor    = "#313131"
-        bodyContainerAlbumes.style.backgroundColor      = "#313131"
-        bodyContainerArtistas.style.backgroundColor     = "#313131"
         this.innerText                                  = "Modo Oscuro";
     }
 })

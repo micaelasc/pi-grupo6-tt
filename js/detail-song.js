@@ -79,47 +79,38 @@ form.addEventListener("input", function (e) {
     }
 
 })
-///----------------------------------------- BOTON MODO OSCURO MODO CLARO ---------------------------------------------------//
+///------------------------------------ BOTON MODO OSCURO MODO CLARO en detail song---------------------------------------------------//
 
 let btnMode                 = document.querySelector("#modo-oscuro");
 let body                    = document.querySelector("body");
-let bodyTitulosCancion      = document.querySelector(".tituloCancion");
-let bodyTitulosAlbum        = document.querySelector(".tituloAlbum");
-let bodyTitulosArtista      = document.querySelector(".tituloArtista");
-let bodyContainerCanciones  = document.querySelector(".box-container-canciones");
-let bodyContainerAlbumes    = document.querySelector(".box-container-albumes");
-let bodyContainerArtistas   = document.querySelector(".box-container-artistas");
+let cajaCancion             = document.querySelector(".detalle-de-cancion")
+let cancion                 = document.querySelector(".nombreCancion")
+let artista                 = document.querySelector(".nombreArtistaDeCancion")
+let albumcito               = document.querySelector(".nombreAlbumDeCancion")
+let botoncito               = document.querySelector(".btnFav")
 
 btnMode.addEventListener("click", function (e) {
     if (btnMode.innerText                           == "Modo Oscuro") {
         body.style.background                       = "#313131";
-        bodyTitulosCancion.style.backgroundColor    = "#fff"
-        bodyTitulosAlbum.style.backgroundColor      = "#fff"
-        bodyTitulosArtista.style.backgroundColor    = "#fff"
+        cajaCancion.style.background                = "magenta"
+        cancion.style.color                         = "black"
+        artista.style.color                         = "black"
+        albumcito.style.color                       = "black"
+        botoncito.style.color                       = "black"
+        botoncito.style.background                  = "orchid"
+        // botoncito.style.border                      = "black" // no funciona :(((
 
-        bodyTitulosCancion.style.color              = "black"
-        bodyTitulosAlbum.style.color                = "black"
-        bodyTitulosArtista.style.color              = "black"
-
-        bodyContainerCanciones.style.backgroundColor    = "#fff"
-        bodyContainerAlbumes.style.backgroundColor      = "#fff"
-        bodyContainerArtistas.style.backgroundColor     = "#fff"
-        this.innerText                                  = "Modo Claro";
+        this.innerText                             = "Modo Claro";
     } else {
-        body.style.background                       = "#fff";
-        bodyTitulosCancion.style.backgroundColor    = "#313131"
-        bodyTitulosAlbum.style.backgroundColor      = "#313131"
-        bodyTitulosArtista.style.backgroundColor    = "#313131"
+        body.style.background                  = "#fff";
+        cajaCancion.style.background           = "#9c27b0"
+        cancion.style.color                    = "white"
+        artista.style.color                    = "white"
+        albumcito.style.color                  = "white"
+        botoncito.style.color                  = "white"
+        botoncito.style.background             = "darkorchid"
+        // botoncito.style.border                 = "white"  // no funciona :(((
 
-        bodyTitulosCancion.style.color  = "white"
-        bodyTitulosAlbum.style.color    = "white"
-        bodyTitulosArtista.style.color  = "white"
-
-        bodyContainerCanciones.style.backgroundColor    = "#313131"
-        bodyContainerAlbumes.style.backgroundColor      = "#313131"
-        bodyContainerArtistas.style.backgroundColor     = "#313131"
-        this.innerText                                  = "Modo Oscuro";
+        this.innerText                         = "Modo Oscuro";
     }
 })
-
-
