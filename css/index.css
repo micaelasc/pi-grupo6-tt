@@ -19,7 +19,8 @@ body {
 .logo-img {
     display: flex;
     width: 100px;
-    height: 100;                     /* el logo */
+    height: 100;
+    /* el logo */
     margin: 10px;
     padding: 10px;
 }
@@ -34,10 +35,6 @@ nav ul {
     text-align: center;
 }
 
-/* nav ul.ul-logo {
-    float: left;                                  /*sacaar
-} */
-
 .ul-buscador {
     display: center;
     justify-content: center;
@@ -45,9 +42,6 @@ nav ul {
     width: 100%;
 }
 
-/* nav ul.ul-menu {
-    float: right;                               /*sacaar
-} */
 
 nav ul li {
     margin: 0;
@@ -85,8 +79,6 @@ header {
     height: 80px;
     background-color: #9c27b0;
     margin: 5px;
-    -webkit-box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
-    -moz-box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
     box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
 }
 
@@ -165,16 +157,10 @@ header {
 /* --------------------------- BODY ----------------------------------- */
 body .active {
     background-image: url(../img/fondo-blanco.jpeg);
-    /* margin: 0;
-    border: 0;
-    padding: 0;
-    width: 100%;
-    font-size: 20px;
-    font-family: 'Noto Sans JP', sans-serif; */
 }
 
 
-.canciones {                        /* este justo no se que hace */
+.canciones {
     display: flex;
     justify-items: center;
     align-items: center;
@@ -213,7 +199,7 @@ body .active {
     border-radius: 20px;
 }
 
-.box-container .h3 {   /*--- este tampoco se que hace bien -----*/
+.box-container .h3 {
     font-size: 20px;
     color: #9c27b0;
 }
@@ -243,12 +229,14 @@ body .active {
     flex-direction: column;
     border-radius: 20px;
     margin: 15px 2px;
+    text-decoration: none;
 
 }
 
 .cajita-cancion:hover {
     text-decoration: underline;
     box-shadow: 10px 10px 9px -10px rgba(0, 0, 0, .8);
+    background-color: #c385ce;
 }
 
 .cajita-cancion p {
@@ -301,7 +289,7 @@ body .active {
     flex-direction: column;
     border-radius: 20px;
     margin: 15px 2px;
-    overflow: hidden;                /*dejarlo hasta que cambiemos la letra*/
+    overflow: hidden;
 }
 
 .cajita-albumes:hover {
@@ -396,8 +384,6 @@ body .active {
 footer {
     margin: 5px;
     background-color: #9c27b0;
-    /* -webkit-box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
-    -moz-box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8); */                       /*preguntar mora*/
     box-shadow: 0px -10px 9px -10px rgba(0, 0, 0, .8);
 }
 
@@ -416,12 +402,9 @@ footer ul {
     align-items: center;
 }
 
-
-
-
 /*-------------------------- DETAILS -----------------------------------------------------------*/
 /*-------------------------- DETAIL ALBUM --------------------------------------*/
-.detalle-del-album{
+.detalle-del-album {
     display: flex;
     background-color: #9c27b0;
     height: 1800px;
@@ -430,178 +413,322 @@ footer ul {
     flex-direction: column;
     border-radius: 20px;
     margin: 15px 2px;
-    overflow: hidden;    
+    overflow: hidden;
 }
-.imagenAlbum{
+
+.imagenAlbum {
     padding: 20px 0px 0px 20px;
 }
-.nombreAlbum{
+
+.nombreAlbum {
     color: white;
     padding: 0px 0px 0px 20px;
 }
 
-.nombreArtistaDelAlbum{
+.nombreArtistaDelAlbum {
     color: white;
     padding: 0px 0px 0px 20px;
 }
 
-.nombreGeneroAlbum{
+.nombreGeneroAlbum {
     color: white;
     padding: 0px 0px 0px 20px;
 }
 
-.listaAlbum li{
+.listaAlbum li {
     color: white;
     padding: 0px 0px 0px 20px;
 }
 
-.publicacionAlbum{
+.publicacionAlbum {
     color: white;
     padding: 0px 0px 0px 20px;
 }
 
 /*-------------------------- DETAIL CANCION --------------------------------------*/
-.detalle-de-cancion{
+.detalle-de-cancion {
     display: flex;
     background-color: #9c27b0;
-    height: 400px;
-    width: 500px;
-    align-items: flex-start;
-    flex-direction: column;
-    border-radius: 20px;
-    margin: 15px 2px;
-    overflow: hidden;    
-}
-.imagenAlbumDeCancion{
-    padding: 20px 0px 0px 20px;
-
-}
-.nombreCancion{
-    color: white;
-    padding: 0px 0px 0px 20px;
-}
-
-.nombreArtistaDeCancion{
-    color: white;
-    padding: 0px 0px 0px 20px;
-}
-
-.nombreAlbumDeCancion{
-    color: white;
-    padding: 0px 0px 0px 20px;
-}
-
-/*-------------------------- DETAIL ARTISTA --------------------------------------*/
-.detalle-del-artista{
-    display: flex;
-    background-color: #9c27b0;
-    height: 400px;
-    width: 500px;
-    align-items: flex-start;
-    flex-direction: column;
-    border-radius: 20px;
-    margin: 15px 2px;
-    overflow: hidden;    
-}
-.imagenArtista{
-    padding: 20px 0px 0px 20px;
-
-}
-.nombreArtista{
-    padding: 20px 0px 0px 20px;
-    color: white;
-}
-.listaArtistaAlbumes{
-    color: #fff;
-}
-
-/*--------------------------  GENRES  --------------------------------------*/
-.tituloGeneros{
-    color: white;
-    display: flex;
-    justify-content: space-around;
-}
-.cajaGeneros{
-    display: flex;
-    background-color: #9c27b0;
-    height: 800px;
-    width: 1400px;
+    height: 500px;
+    width: 300px;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
     border-radius: 20px;
     margin: 15px 2px;
     overflow: hidden;
 }
 
-.cajita-generos{
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+.imagenAlbumDeCancion {
+    padding: 40px 0px 0px 10px;
+
 }
 
-.fotitoGeneros{
-    margin: auto;
-}
-/*-------------------------- DETAIL GENRES (falta hacer)--------------------------------------*/
+.nombreCancion {
+    text-decoration: none;
+    color: white;
+    padding: 0px 0px 0px 10px;
 
+}
+
+.nombreArtistaDeCancion {
+    color: white;
+    padding: 0px 0px 0px 10px;
+    text-decoration: none;
+}
+
+.nombreAlbumDeCancion {
+    color: white;
+    padding: 0px 0px 0px 10px;
+    text-decoration: none;
+}
+
+.btnFav {
+    width: 150px;
+    height: 30px;
+    background-color: #c385ce;
+    padding: 0px 0px 10px 10px;
+
+}
+
+.btnFav:hover {
+    text-decoration: underline;
+    box-shadow: 10px 10px 9px -10px rgba(0, 0, 0, .8);
+    background-color: #3e0049;
+}
+
+/*-------------------------- DETAIL ARTISTA --------------------------------------*/
+.detalle-del-artista {
+    display: flex;
+    background-color: #9c27b0;
+    height: 400px;
+    width: 500px;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 15px 2px;
+    overflow: hidden;
+}
+
+.imagenArtista {
+    padding: 20px 0px 0px 20px;
+
+}
+
+.nombreArtista {
+    padding: 20px 0px 0px 20px;
+    color: white;
+}
+
+.listaArtistaAlbumes {
+    color: #fff;
+}
+
+/*--------------------------  GENRES  --------------------------------------*/
+.tituloGeneros {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cajaGeneros {
+    display: flex;
+    height: 1400px;
+    width: 1250px;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px 10px 10px 10px;
+    overflow: hidden;
+}
+
+.cajita-generos {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 200px;
+    height: 200px;
+    background-color: #9c27b0;
+    border-radius: 20px;
+    margin: 10px 10px 10px 10px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cajita-generos:hover {
+    text-decoration: underline;
+    box-shadow: 10px 10px 9px -10px rgba(0, 0, 0, .8);
+    background-color: #c385ce;
+}
+
+.cajaGeneros h3 {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 10px 10px 10px;
+}
+
+.fotitoGeneros {
+    width: 110px;
+    height: 110px;
+    border-radius: 20px;
+    margin: 10px 10px 10px 10px;
+}
+
+/*-------------------------- DETAIL GENRES --------------------------------------*/
+
+h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.detailGenero {
+    width: 1200px;
+    height: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px 0px 0px 25px;
+}
+
+.detailGenero li {
+    width: 180px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #9c27b0;
+    margin: 10px 10px 10px 10px;
+
+}
+
+.detailGenero li:hover {
+    text-decoration: underline;
+    box-shadow: 10px 10px 9px -10px rgba(0, 0, 0, .8);
+    background-color: #c385ce;
+}
+
+.detailGenero li h3 {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    overflow: hidden;
+    margin: 5px 5px 5px 5px;
+
+}
+
+.detailGenero li img {
+    display: flex;
+    width: 60px;
+    margin: 5px 5px 5px 5px;
+}
 
 
 
 /*-------------------------- PLAYLIST --------------------------------------*/
-.tituloPlaylist{
+.tituloPlaylist {
     color: white;
     display: flex;
     justify-content: space-around;
 }
 
-.tituloFav{
+.tituloFav {
     color: white;
 }
 
-#lista{
-    display: flex;
-    background-color: #9c27b0;
+#lista {
     height: 400px;
-    width: 900px;
-    align-items: center;
-    justify-content: space-around;
+    width: 1250px;
+    display: flex;
     flex-direction: row;
+    justify-content: center ;
+    align-items: center;
+    background-color: #c385ce;
     border-radius: 20px;
-    margin: 15px 2px;
-    overflow: scroll;  
+    margin: 15px 15px 15px 15px ;
+    overflow: scroll;
 }
 
-.cajita-playlist{
+.cajita-playlist {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    margin: 15px 15px 15px 0px ;
+    background-color: #9c27b0;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.cajita-playlist img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin: 20px 0 px 0px 0px;
+}
+
+.titulitoPlaylist {
+    color: #fff;
+    margin: 0px;
 
 }
 
-.titulitoPlaylist{
+.nombreArtistaPlaylist {
+    color: #fff;
+}
+
+/*-------------------------- SEARCH-RESULTS----------------------------------------------------------------------------------------*/
+.resultadoBusqueda {
+    color: #fff;
+    align-self: center;
+}
+
+.cancionBusqueda {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 800px;
+    height: 90px;
+    background-color: #9c27b0;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px 10px 10px;
+    flex-direction: column;
+}
+
+.cancionBusqueda:hover {
+    text-decoration: underline;
+    box-shadow: 10px 10px 9px -10px rgba(0, 0, 0, .8);
+    background-color: #c385ce;
 
 }
 
-.nombreArtistaPlaylist{
-
+.cancionBusqueda h4 {
+    text-decoration: none;
+    color: #fff;
+    margin: 0%;
 }
 
-/*-------------------------- SEARCH-RESULTS (falta hacer)--------------------------------------*/
-
-
-
+.cancionBusqueda h5 {
+    text-decoration: none;
+    color: #fff;
+    margin: 0%;
+}
 
 /*-------------------------- MEDIA QUERIES --------------------------------------------*/
 /*-------------------------- TELEFONO --------------------------------------------*/
-@media (max-width: 450px){
-    body{
+@media (max-width: 450px) {
+    body {
         max-width: 450 px;
     }
 
-    main{
+    main {
         width: 100 vw;
     }
 
-    header{
+    header {
         max-height: 13vh;
         width: 100vw;
     }
@@ -612,16 +739,19 @@ footer ul {
         margin: auto;
     }
 
-    #search-button{
+    #search-button {
         margin: auto;
     }
-    .form{
+
+    .form {
         align-items: center;
         justify-content: space-around;
-    } 
+    }
+
     nav {
         margin: auto;
     }
+
     nav ul {
         display: flex;
         flex-direction: row;
@@ -629,6 +759,7 @@ footer ul {
         flex-wrap: nowrap;
         align-items: center;
     }
+
     nav ul li {
         font-size: 0.5rem;
         margin: auto;
@@ -636,22 +767,26 @@ footer ul {
         width: 70px;
         height: 30px;
     }
-    nav ul li a{
+
+    nav ul li a {
         width: 30vw;
     }
-    .header-section-nav{
+
+    .header-section-nav {
         width: 30vw;
         margin: auto;
     }
-    .header-section-form{
+
+    .header-section-form {
         width: 30vw;
         margin: 0;
     }
-    #modo-oscuro{
+
+    #modo-oscuro {
         width: 10vw;
     }
 
-    .tituloCancion{
+    .tituloCancion {
         width: 80vw;
         align-content: center;
         align-self: center;
@@ -659,27 +794,13 @@ footer ul {
         margin-top: 20px;
     }
 
-    .box-container-canciones{
+    .box-container-canciones {
         width: 80vw;
         margin: auto;
         margin-top: 20px;
     }
 
-    .tituloAlbum{
-        width: 80vw;
-        align-content: center;
-        align-self: center;
-        margin: auto;
-        margin-top: 20px;
-    }
-
-    .box-container-albumes{
-        width: 80vw;
-        margin: auto;
-        margin-top: 20px;
-    }
-
-    .tituloArtista{
+    .tituloAlbum {
         width: 80vw;
         align-content: center;
         align-self: center;
@@ -687,11 +808,24 @@ footer ul {
         margin-top: 20px;
     }
 
-    .box-container-artistas{
+    .box-container-albumes {
+        width: 80vw;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .tituloArtista {
+        width: 80vw;
+        align-content: center;
+        align-self: center;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .box-container-artistas {
         width: 80vw;
         margin: auto;
         margin-top: 20px;
     }
 
 }
-

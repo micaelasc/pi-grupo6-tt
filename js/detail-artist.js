@@ -7,8 +7,6 @@ let url = "https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/artis
 console.log(url)
 
 
-
-
 //fetch del artista
 fetch(url)
     .then(function (response) {
@@ -21,7 +19,7 @@ fetch(url)
         imagenArtista.src = data.picture
 
         // nombre artista
-        let nombreArtista = document.querySelector(".nombreArtista")
+        let nombreArtista       = document.querySelector(".nombreArtista")
         nombreArtista.innerHTML = data.name
 
         // fetch para maximo 5 albumes del artista PEDIR AYUDA
@@ -35,7 +33,7 @@ fetch(url)
                 for (let i = 0; i < 5; i++) {
                     albumesArtista.innerHTML += `
                     <li class= "listitaArtistaAlbumes">
-                    ${data.data[i].album.title}
+                    <a href= "detail-song.html?id=${data.data[i].id}">${data.data[i].title}</a>
                     </li>
                     `
                 }
@@ -43,38 +41,32 @@ fetch(url)
             .catch(function (error) {
                 alert("Error" + error)
             })
-
-
-        })
+    })
     .catch(function (error) {
         alert("Error" + error)
     })
-
-
-
 // ------------------------------BUSCADOR--------------------------------------------------------------------------
 
-let form = document.querySelector(".form"); //HTML form element
-let input = document.querySelector("#search-input"); //HTML input element
-let btnserch = document.querySelector("#search-button") // HTML boton de buscar
+let form        = document.querySelector(".form"); //HTML form element
+let input       = document.querySelector("#search-input"); //HTML input element
+let btnserch    = document.querySelector("#search-button") // HTML boton de buscar
 
 form.addEventListener("submit", function (e) {
     let busqueda = input.value
     if (busqueda.length < 3) {
-            e.preventDefault();
-            alert("Debes escribir por lo menos tres caracteres");                      //mensaje que no te deje escribir menos de 3 caracteres
-            return
-        }
+        e.preventDefault();
+        alert("Debes escribir por lo menos tres caracteres");                        //mensaje que no te deje escribir menos de 3 caracteres
+        return
+    }
     if (busqueda.length === "") {
-            e.preventDefault();
-            alert("Ingrese texto!!");                                   //mensaje que no te deje dejar el campo vacío
-            return
-        }
+        e.preventDefault();
+        alert("Ingrese texto!!");                                            //mensaje que no te deje dejar el campo vacío
+        return
+    }
 })
-
-form.addEventListener("input", function(e){
+form.addEventListener("input", function (e) {
     let busqueda = input.value
-    if(busqueda.length >= 3){                                               //cuando escribir más de 3 caracteres cambia el color de busqueda
+    if (busqueda.length >= 3) {                                               //cuando escribir más de 3 caracteres cambia el color de busqueda
         btnserch.style.background = "#009966"
     }
 
@@ -82,44 +74,45 @@ form.addEventListener("input", function(e){
 
 //----------------------------------------- BOTON MODO OSCURO MODO CLARO ---------------------------------------------------//
 
-let btnMode = document.querySelector("#modo-oscuro");
-let body = document.querySelector("body");
-let bodyTitulosCancion = document.querySelector(".tituloCancion");
-let bodyTitulosAlbum = document.querySelector(".tituloAlbum");
-let bodyTitulosArtista = document.querySelector(".tituloArtista");
-let bodyContainerCanciones = document.querySelector(".box-container-canciones");
-let bodyContainerAlbumes = document.querySelector(".box-container-albumes");
-let bodyContainerArtistas = document.querySelector(".box-container-artistas");
+let btnMode                 = document.querySelector("#modo-oscuro");
+let body                    = document.querySelector("body");
+let bodyTitulosCancion      = document.querySelector(".tituloCancion");
+let bodyTitulosAlbum        = document.querySelector(".tituloAlbum");
+let bodyTitulosArtista      = document.querySelector(".tituloArtista");
+let bodyContainerCanciones  = document.querySelector(".box-container-canciones");
+let bodyContainerAlbumes    = document.querySelector(".box-container-albumes");
+let bodyContainerArtistas   = document.querySelector(".box-container-artistas");
 
 btnMode.addEventListener("click", function (e) {
-    if (btnMode.innerText == "Modo Oscuro") {
-        body.style.background = "#313131";
-        bodyTitulosCancion.style.backgroundColor = "#fff"
-        bodyTitulosAlbum.style.backgroundColor = "#fff"
-        bodyTitulosArtista.style.backgroundColor = "#fff"
-        
-        bodyTitulosCancion.style.color = "black"
-        bodyTitulosAlbum.style.color = "black"
-        bodyTitulosArtista.style.color = "black"
+    if (btnMode.innerText                           == "Modo Oscuro") {
+        body.style.background                       = "#313131";
+        bodyTitulosCancion.style.backgroundColor    = "#fff"
+        bodyTitulosAlbum.style.backgroundColor      = "#fff"
+        bodyTitulosArtista.style.backgroundColor    = "#fff"
 
-        bodyContainerCanciones.style.backgroundColor = "#fff"
-        bodyContainerAlbumes.style.backgroundColor = "#fff"
-        bodyContainerArtistas.style.backgroundColor = "#fff"
-        this.innerText = "Modo Claro";
+        bodyTitulosCancion.style.color              = "black"
+        bodyTitulosAlbum.style.color                = "black"
+        bodyTitulosArtista.style.color              = "black"
+
+        bodyContainerCanciones.style.backgroundColor    = "#fff"
+        bodyContainerAlbumes.style.backgroundColor      = "#fff"
+        bodyContainerArtistas.style.backgroundColor     = "#fff"
+        this.innerText                                  = "Modo Claro";
     } else {
-        body.style.background = "#fff";
-        bodyTitulosCancion.style.backgroundColor = "#313131"
-        bodyTitulosAlbum.style.backgroundColor = "#313131"
-        bodyTitulosArtista.style.backgroundColor = "#313131"
+        body.style.background                       = "#fff";
+        bodyTitulosCancion.style.backgroundColor    = "#313131"
+        bodyTitulosAlbum.style.backgroundColor      = "#313131"
+        bodyTitulosArtista.style.backgroundColor    = "#313131"
 
-        bodyTitulosCancion.style.color = "white"
-        bodyTitulosAlbum.style.color = "white"
-        bodyTitulosArtista.style.color = "white"
+        bodyTitulosCancion.style.color  = "white"
+        bodyTitulosAlbum.style.color    = "white"
+        bodyTitulosArtista.style.color  = "white"
 
-        bodyContainerCanciones.style.backgroundColor = "#313131"
-        bodyContainerAlbumes.style.backgroundColor = "#313131"
-        bodyContainerArtistas.style.backgroundColor = "#313131"
-        this.innerText = "Modo Oscuro";
+        bodyContainerCanciones.style.backgroundColor    = "#313131"
+        bodyContainerAlbumes.style.backgroundColor      = "#313131"
+        bodyContainerArtistas.style.backgroundColor     = "#313131"
+        this.innerText                                  = "Modo Oscuro";
     }
 })
+
 
