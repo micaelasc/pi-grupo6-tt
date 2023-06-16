@@ -75,16 +75,19 @@ form.addEventListener("input", function (e) {
 //------------------------------------ BOTON MODO OSCURO MODO CLARO en playlist ---------------------------------------------------//
 let btnMode                 = document.querySelector("#modo-oscuro");
 let body                    = document.querySelector("body");
+let tituloPlaylist          = document.querySelector(".tituloPlaylist")
 
 btnMode.addEventListener("click", function (e) {
 
     if (btnMode.innerText                           == "Modo Oscuro") {
         body.style.background                       = "#313131";
+        tituloPlaylist.style.color                  = "white"
 
         this.innerText                                  = "Modo Claro";
     } else {
         body.style.background                       = "#fff";
-        
+        tituloPlaylist.style.color                  = "black"
+
         this.innerText                                  = "Modo Oscuro";
     }
 })

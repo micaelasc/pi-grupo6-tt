@@ -47,15 +47,17 @@ form.addEventListener("input", function (e) {
 //---------------------------------- BOTON MODO OSCURO MODO CLARO en genres---------------------------------------------------//
 let btnMode                 = document.querySelector("#modo-oscuro");
 let body                    = document.querySelector("body");
+let tituloGeneros           = document.querySelector(".tituloGeneros")
 
 btnMode.addEventListener("click", function (e) {
-
     if (btnMode.innerText                           == "Modo Oscuro") {
         body.style.background                       = "#313131";
+        tituloGeneros.style.color                   = "white"
 
         this.innerText                                  = "Modo Claro";
     } else {
         body.style.background                       = "#fff";
+        tituloGeneros.style.color                   = "black"
 
         this.innerText                                  = "Modo Oscuro";
     }
