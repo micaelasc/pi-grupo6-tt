@@ -6,7 +6,6 @@ let id = queryObj.get("id")       // obtiene el valor de la clave dentro del que
 let url = "https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/artist/" + id;
 console.log(url)
 
-
 //fetch del artista
 fetch(url)
     .then(function (response) {
@@ -22,7 +21,7 @@ fetch(url)
         let nombreArtista       = document.querySelector(".nombreArtista")
         nombreArtista.innerHTML = data.name
 
-        // fetch para maximo 5 albumes del artista PEDIR AYUDA
+        // fetch para maximo 5 albumes del artista
         fetch("https://cors-anywhere.herokuapp.com/" + data.tracklist)
             .then(function (response) {
                 return response.json()
@@ -46,7 +45,6 @@ fetch(url)
         alert("Error" + error)
     })
 // ------------------------------BUSCADOR--------------------------------------------------------------------------
-
 let form        = document.querySelector(".form"); //HTML form element
 let input       = document.querySelector("#search-input"); //HTML input element
 let btnserch    = document.querySelector("#search-button") // HTML boton de buscar
@@ -69,7 +67,6 @@ form.addEventListener("input", function (e) {
     if (busqueda.length >= 3) {                                               //cuando escribir más de 3 caracteres cambia el color de busqueda
         btnserch.style.background = "#009966"
     }
-
 })
 
 //------------------------------- BOTON MODO OSCURO MODO CLARO en detail artist---------------------------------------------------//
@@ -86,7 +83,7 @@ btnMode.addEventListener("click", function (e) {
         cajaArtista.style.background                = "magenta"
         imagenArtista.style.color                   = "black"
         nombreArtista.style.color                   = "black"
-        listaArtistaAlbumes.style.color             = "black" // aca si se cambio el color de los li wtf
+        listaArtistaAlbumes.style.color             = "black" 
 
         this.innerText                                  = "Modo Claro";
     } else {
@@ -99,5 +96,3 @@ btnMode.addEventListener("click", function (e) {
         this.innerText                                  = "Modo Oscuro";
     }
 })
-
-

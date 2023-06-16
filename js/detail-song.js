@@ -24,7 +24,6 @@ fetch(url)
     .catch(function (error) {
         alert("Error" + error)                          // busca errores en el fetch
     })
-
 /*--------------------------------------GUARDAR EN FAVORITOS---------------------------------------------------------- */
 
 let favoritos = [];             /* Crear un array vacio para luego ser completado con lo que trae localStorage */
@@ -54,7 +53,6 @@ btnFav.addEventListener("click", function () {
 })
 
 // ------------------------------BUSCADOR--------------------------------------------------------------------------
-
 let form        = document.querySelector(".form"); //HTML form element
 let input       = document.querySelector("#search-input"); //HTML input element
 let btnserch    = document.querySelector("#search-button") // HTML boton de buscar
@@ -77,10 +75,8 @@ form.addEventListener("input", function (e) {
     if (busqueda.length >= 3) {                                               //cuando escribir más de 3 caracteres cambia el color de busqueda
         btnserch.style.background = "#009966"
     }
-
 })
 ///------------------------------------ BOTON MODO OSCURO MODO CLARO en detail song---------------------------------------------------//
-
 let btnMode                 = document.querySelector("#modo-oscuro");
 let body                    = document.querySelector("body");
 let cajaCancion             = document.querySelector(".detalle-de-cancion")
@@ -98,7 +94,6 @@ btnMode.addEventListener("click", function (e) {
         albumcito.style.color                       = "black"
         botoncito.style.color                       = "black"
         botoncito.style.background                  = "orchid"
-        // botoncito.style.border                      = "black" // no funciona :(((
 
         this.innerText                             = "Modo Claro";
     } else {
@@ -109,7 +104,6 @@ btnMode.addEventListener("click", function (e) {
         albumcito.style.color                  = "white"
         botoncito.style.color                  = "white"
         botoncito.style.background             = "darkorchid"
-        // botoncito.style.border                 = "white"  // no funciona :(((
 
         this.innerText                         = "Modo Oscuro";
     }

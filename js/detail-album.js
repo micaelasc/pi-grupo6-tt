@@ -84,7 +84,6 @@ let tituloAlbum             = document.querySelector(".nombreAlbum");
 let artistaAlbum            = document.querySelector(".nombreArtistaDelAlbum");
 let generoAlbum             = document.querySelector(".nombreGeneroAlbum");
 let fechaAlbum              = document.querySelector(".publicacionAlbum");
-let listaAlbum          = document.querySelector(".listaAlbum");
 
 btnMode.addEventListener("click", function (e) {
     if (btnMode.innerText                           == "Modo Oscuro") {
@@ -94,7 +93,6 @@ btnMode.addEventListener("click", function (e) {
         artistaAlbum.style.color                    = "black"
         generoAlbum.style.color                     = "black"
         fechaAlbum.style.color                      = "black"
-        listaAlbum.style.color                  = "black" //quiero cambiar el color de los numeritos
         
         this.innerText                                  = "Modo Claro";
     } else {
@@ -104,10 +102,7 @@ btnMode.addEventListener("click", function (e) {
         artistaAlbum.style.color                    = "white"
         generoAlbum.style.color                     = "white"
         fechaAlbum.style.color                      = "white"
-        listaAlbum.style.color                  = "white" // no se como
 
         this.innerText                                  = "Modo Oscuro";
     }
 })
-
-
