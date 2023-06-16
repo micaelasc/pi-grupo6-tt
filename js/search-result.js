@@ -1,3 +1,4 @@
+// ------------------------------BUSCADOR--------------------------------------------------------------------------
 let queryString = location.search;               // nos retorna la informacion en cadena de texto
 let queryObj = new URLSearchParams(queryString);        //define metodos utiles para trabajar con los parametros
 let busqueda = queryObj.get("busqueda");           // obtiene el valor de la clave dentro del querystring
@@ -11,7 +12,7 @@ fetch(url)
         console.log(data)
         let resultadoBusqueda = document.querySelector(".resultadoBusqueda")
         resultadoBusqueda.innerText = `Los resultados para ${busqueda} son: `
-        let listaDeBusqueda = document.querySelector(".listaDeBusqueda")  //que hace esto, no lo llamamos en ningun lado
+        // let listaDeBusqueda = document.querySelector(".listaDeBusqueda")  //que hace esto, no lo llamamos en ningun lado
         for (let i = 0; i < data.data.length; i++) {
             resultadoBusqueda.innerHTML += ` 
             <article class="cancionBusqueda"
@@ -32,8 +33,8 @@ fetch(url)
     .catch(function (error) {
         alert("Error" + error)
     })
-// ------------------------------BUSCADOR--------------------------------------------------------------------------
 
+//----------------------------------------------------BUSCADOR----------------------------------------------------------------------------
 let form        = document.querySelector(".form"); //HTML form element
 let input       = document.querySelector("#search-input"); //HTML input element
 let btnserch    = document.querySelector("#search-button") // HTML boton de buscar
@@ -60,24 +61,16 @@ form.addEventListener("input", function (e) {
 //------------------------------------ BOTON MODO OSCURO MODO CLARO en results---------------------------------------------------//
 let btnMode                 = document.querySelector("#modo-oscuro");
 let body                    = document.querySelector("body");
-let resultadoBusqueda       = document.querySelector(".resultadoBusqueda");
-let cancionBusqueda       = document.querySelector(".cancionBusqueda");
-
 
 btnMode.addEventListener("click", function (e) {
+
     if (btnMode.innerText                           == "Modo Oscuro") {
         body.style.background                       = "#313131";
-        resultadoBusqueda.style.color               = "white"
-        cancionBusqueda.style.background            = "magenta" //tira null tambien .. que esta pasandooooooooo
 
         this.innerText                                  = "Modo Claro";
     } else {
         body.style.background                       = "#fff";
-        resultadoBusqueda.style.color               = "black"
-        cancionBusqueda.style.background            = "#9c27b0"
 
         this.innerText                                  = "Modo Oscuro";
     }
 })
-
-

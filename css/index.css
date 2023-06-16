@@ -42,7 +42,6 @@ nav ul {
     width: 100%;
 }
 
-
 nav ul li {
     margin: 0;
     padding: 15px 12px 0 12px;
@@ -153,12 +152,10 @@ header {
 }
 
 
-
 /* --------------------------- BODY ----------------------------------- */
 body .active {
     background-image: url(../img/fondo-blanco.jpeg);
 }
-
 
 .canciones {
     display: flex;
@@ -230,7 +227,6 @@ body .active {
     border-radius: 20px;
     margin: 15px 2px;
     text-decoration: none;
-
 }
 
 .cajita-cancion:hover {
@@ -295,6 +291,7 @@ body .active {
 .cajita-albumes:hover {
     text-decoration: underline;
     box-shadow: 10px 10px 9px -10px rgba(0, 0, 0, .8);
+    background-color: #c385ce;
 }
 
 .cajita-albumes p {
@@ -352,6 +349,7 @@ body .active {
 .cajita-artistas:hover {
     text-decoration: underline;
     box-shadow: 10px 10px 9px -10px rgba(0, 0, 0, .8);
+    background-color: #c385ce;
 }
 
 .cajita-artistas p {
@@ -402,7 +400,7 @@ footer ul {
     align-items: center;
 }
 
-/*-------------------------- DETAILS -----------------------------------------------------------*/
+/*-------------------------- DETAILS -----------------------------------------------*/
 /*-------------------------- DETAIL ALBUM --------------------------------------*/
 .detalle-del-album {
     display: flex;
@@ -575,7 +573,6 @@ footer ul {
 }
 
 /*-------------------------- DETAIL GENRES --------------------------------------*/
-
 h1 {
     color: #fff;
     text-align: center;
@@ -626,8 +623,6 @@ h1 {
     margin: 5px 5px 5px 5px;
 }
 
-
-
 /*-------------------------- PLAYLIST --------------------------------------*/
 .tituloPlaylist {
     color: white;
@@ -663,6 +658,7 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
 .cajita-playlist img{
     width: 100px;
     height: 100px;
@@ -673,7 +669,6 @@ h1 {
 .titulitoPlaylist {
     color: #fff;
     margin: 0px;
-
 }
 
 .nombreArtistaPlaylist {
@@ -797,6 +792,7 @@ h1 {
         margin: auto;
         margin-top: 20px;
     }
+<<<<<<< HEAD
     .cajaGeneros{
         display: flex;
         height: 1400px;
@@ -855,4 +851,6 @@ footer nav{
     align-items: center;
 
 }
+=======
+>>>>>>> 7362bd90ca8a81815fa12ad41f04d1817a4de9f7
 }

@@ -10,7 +10,7 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/genre")  
             cajaGeneros.innerHTML += `
             <article class="cajita-generos">
                 <img class="fotitoGeneros" src="${data.data[i].picture}">
-                 <a href="./detail-genrer.html?id=${data.data[i].id}">
+                 <a href="./detail-genrer.html?id=${data.data[i].id}&nombre=${data.data[i].name}">
                      <h3 class="generitos"> ${data.data[i].name} </h3> 
                 </a>
             </article>
@@ -47,27 +47,16 @@ form.addEventListener("input", function (e) {
 //---------------------------------- BOTON MODO OSCURO MODO CLARO en genres---------------------------------------------------//
 let btnMode                 = document.querySelector("#modo-oscuro");
 let body                    = document.querySelector("body");
-// let cajaGeneros             = document.querySelector(".cajaGeneros"); // es la section
-let cajitaGeneros           = document.querySelector(".cajita-generos");
-let tituloGeneros           = document.querySelector(".tituloGeneros");
-let generitos               = document.querySelector(".generitos");
 
 btnMode.addEventListener("click", function (e) {
+
     if (btnMode.innerText                           == "Modo Oscuro") {
         body.style.background                       = "#313131";
-        tituloGeneros.style.color                   = "white"
-        // cajitaGeneros.style.color              = "#9c27b0" // me tira un cannot read properties of null ?!?!?!?!?
-        // generitos.style.color                       = "white"
 
         this.innerText                                  = "Modo Claro";
     } else {
         body.style.background                       = "#fff";
-        tituloGeneros.style.color                   = "black"
-        // cajitaGeneros.style.color              = "magenta"
-        // generitos.style.color                       = "black"
 
         this.innerText                                  = "Modo Oscuro";
     }
 })
-
-

@@ -12,7 +12,7 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/genre")  
     })
     .then(function (data) {            // lo convierte en un parametro
         console.log(data); //muestra las canciones sacados del API
-        let dataGenero = data.data[i].name
+        let dataGenero = data.data[0].name //para que tome solo el primero ya que es el unico
     })
     .catch(function (error) {
         alert("Error" + error) // para atrapar los errores en cualquier parte del fetch
@@ -68,26 +68,15 @@ form.addEventListener("input", function (e) {
 //---------------------------------- BOTON MODO OSCURO MODO CLARO en detail genre---------------------------------------------------//
 let btnMode                 = document.querySelector("#modo-oscuro");
 let body                    = document.querySelector("body");
-let cajaDetalleGenero       = document.querySelector(".detailGenero");
-let liDetailGenre       = document.querySelector(".liDetailGenre");
-let artistaGeneroNombre       = document.querySelector(".artistaGeneroNombre");
 
 btnMode.addEventListener("click", function (e) {
     if (btnMode.innerText                           == "Modo Oscuro") {
         body.style.background                       = "#313131";
-        // cajaDetalleGenero.style.background          = "magenta"
-        // liDetailGenre.style.color                   = "black"
-        // artistaGeneroNombre.style.color             = "black"
 
         this.innerText                                  = "Modo Claro";
     } else {
         body.style.background                       = "#fff";
-        // cajaDetalleGenero.style.background          = "#9c27b0"
-        // liDetailGenre.style.color                   = "white"
-        // artistaGeneroNombre.style.color             = "white"
 
         this.innerText                                  = "Modo Oscuro";
     }
 })
-
-

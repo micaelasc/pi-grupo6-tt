@@ -1,6 +1,5 @@
 //---------------------------------------------- FETCHS -------------------------------------------------------------//
 //------------------------------------- FETCH CANCIONES DE LA API ---------------------------------------------------//
-
 fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart")        // ruta de donde queremos obtener la info
     .then(function (response) {
         return response.json()   // callback para procesar el resultado, decodifica el json
@@ -26,7 +25,6 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart")  
         alert("Error" + error) // para atrapar los errores en cualquier parte del fetch
     })
 //------------------------------------- FETCH ALBUMES DE LA API ---------------------------------------------------//
-
 fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart/0/albums")     // ruta de donde queremos obtener la info
     .then(function (response) {
         return response.json()                     // callback para procesar el resultado, decodifica el json
@@ -74,7 +72,6 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://api.deezer.com/chart/0/a
         alert("Error" + error)                               // para atrapar los errores en cualquier parte del fetch
     })
 // ------------------------------BUSCADOR--------------------------------------------------------------------------
-
 let form        = document.querySelector(".form"); //HTML form element
 let input       = document.querySelector("#search-input"); //HTML input element
 let btnserch    = document.querySelector("#search-button") // HTML boton de buscar
@@ -99,7 +96,6 @@ form.addEventListener("input", function (e) {
     }
 })
 //----------------------------------------- BOTON MODO OSCURO MODO CLARO ---------------------------------------------------//
-
 let btnMode                 = document.querySelector("#modo-oscuro");
 let body                    = document.querySelector("body");
 let bodyTitulosCancion      = document.querySelector(".tituloCancion");
@@ -140,5 +136,3 @@ btnMode.addEventListener("click", function (e) {
         this.innerText                                  = "Modo Oscuro";
     }
 })
-
-

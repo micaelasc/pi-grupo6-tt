@@ -40,17 +40,13 @@ if (favoritos == null || favoritos.length == 0) {
                                     </article>`;
 
                 section.innerHTML = cancionesFavoritos;
-
             })
             .catch(function (error) {
                 alert("Error" + error)
             });
-
     }
 }
-
 //----------------------------------------------------BUSCADOR----------------------------------------------------------------------------
-
 let form = document.querySelector(".form"); //HTML form element
 let input = document.querySelector("#search-input"); //HTML input element
 let btnserch = document.querySelector("#search-button") // HTML boton de buscar
@@ -76,29 +72,19 @@ form.addEventListener("input", function (e) {
         btnserch.style.background = "#009966"
     }
 })
-
 //------------------------------------ BOTON MODO OSCURO MODO CLARO en playlist ---------------------------------------------------//
 let btnMode                 = document.querySelector("#modo-oscuro");
 let body                    = document.querySelector("body");
-let tituloPlaylist          = document.querySelector(".tituloPlaylist");
-let cajitaPlaylist          = document.querySelector(".cajita-playlist");  // me tira que esto es null
-let titulitoPlaylist        = document.querySelector(".titulitoPlaylist"); //esto tb es null
-let nombreArtistaPlaylist   = document.querySelector(".nombreArtistaPlaylist")
 
 btnMode.addEventListener("click", function (e) {
+
     if (btnMode.innerText                           == "Modo Oscuro") {
         body.style.background                       = "#313131";
-        tituloPlaylist.style.color                  = "white"
-        // titulitoPlaylist.style.color                = "white"
 
         this.innerText                                  = "Modo Claro";
     } else {
         body.style.background                       = "#fff";
-        tituloPlaylist.style.color                  = "black"
-        // titulitoPlaylist.style.color                = "black"
         
         this.innerText                                  = "Modo Oscuro";
     }
 })
-
-
