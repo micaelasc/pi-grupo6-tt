@@ -30,7 +30,7 @@ if (favoritos == null || favoritos.length == 0) {
             })
             .then(function (data) {
                 console.log(data);
-
+                let favList = document.querySelector(".favLista")
                 cancionesFavoritos += `<article class="cajita-playlist">
                                         <img src=${data.album.cover} alt='' />
                                         <p class="titulitoPlaylist"> ${data.title}</p>

@@ -405,7 +405,7 @@ footer ul {
 .detalle-del-album {
     display: flex;
     background-color: #9c27b0;
-    height: 1800px;
+    height: max-content;
     width: 100%;
     align-items: flex-start;
     flex-direction: column;
@@ -498,7 +498,7 @@ footer ul {
 .detalle-del-artista {
     display: flex;
     background-color: #9c27b0;
-    height: 50vh;
+    height: max-content;
     width: 100%;
     align-items: flex-start;
     flex-direction: column;
@@ -635,7 +635,7 @@ h1 {
 }
 
 #lista {
-    height: auto;
+    height: max-content;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -643,12 +643,12 @@ h1 {
     align-items: center;
     background-color: #c385ce;
     border-radius: 20px;
-    margin: 15px 15x 15px 15px ;
-    overflow: scroll;
+    margin: 15px 15x 15px 0px ;
+    /* overflow: scroll; */
 }
 
 .cajita-playlist {
-    width: 300px;
+    width: 200px;
     height: 300px;
     display: flex;
     margin: 15px 15px 15px 0px ;
