@@ -408,7 +408,7 @@ footer ul {
     display: flex;
     background-color: #9c27b0;
     height: 1800px;
-    width: 500px;
+    width: 100%;
     align-items: flex-start;
     flex-direction: column;
     border-radius: 20px;
@@ -449,8 +449,8 @@ footer ul {
 .detalle-de-cancion {
     display: flex;
     background-color: #9c27b0;
-    height: 500px;
-    width: 300px;
+    height: 55vh;
+    width: 100%;
     align-items: center;
     flex-direction: column;
     border-radius: 20px;
@@ -500,8 +500,8 @@ footer ul {
 .detalle-del-artista {
     display: flex;
     background-color: #9c27b0;
-    height: 400px;
-    width: 500px;
+    height: 50vh;
+    width: 100%;
     align-items: flex-start;
     flex-direction: column;
     border-radius: 20px;
@@ -532,8 +532,8 @@ footer ul {
 
 .cajaGeneros {
     display: flex;
-    height: 1400px;
-    width: 1250px;
+    height: 100%px;
+    width: 100%;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
@@ -582,8 +582,8 @@ h1 {
 }
 
 .detailGenero {
-    width: 1200px;
-    height: 1200px;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -602,6 +602,7 @@ h1 {
     justify-content: flex-start;
     background-color: #9c27b0;
     margin: 10px 10px 10px 10px;
+    overflow: hidden;
 }
 
 .detailGenero li:hover {
@@ -639,15 +640,15 @@ h1 {
 }
 
 #lista {
-    height: 400px;
-    width: 1250px;
+    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center ;
     align-items: center;
     background-color: #c385ce;
     border-radius: 20px;
-    margin: 15px 15px 15px 15px ;
+    margin: 15px 15x 15px 15px ;
     overflow: scroll;
 }
 
@@ -660,6 +661,7 @@ h1 {
     border-radius: 20px;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .cajita-playlist img{
     width: 100px;
@@ -682,13 +684,18 @@ h1 {
 .resultadoBusqueda {
     color: #fff;
     align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
 }
 
 .cancionBusqueda {
     display: flex;
     flex-wrap: nowrap;
-    width: 800px;
-    height: 90px;
+    width: auto;
+    height: auto;
     background-color: #9c27b0;
     border-radius: 30px;
     align-items: center;
@@ -719,72 +726,36 @@ h1 {
 /*-------------------------- MEDIA QUERIES --------------------------------------------*/
 /*-------------------------- TELEFONO --------------------------------------------*/
 @media (max-width: 450px) {
-    body {
-        max-width: 450 px;
-    }
 
-    main {
-        width: 100 vw;
-    }
 
+/*----------------------------HOME-------------------------------------------*/
     header {
-        max-height: 13vh;
-        width: 100vw;
+        height: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     #search-input {
-        width: 10vw;
+        width: 250px;
         justify-content: center;
-        margin: auto;
+        margin: 5px 5px 5px 5px;
     }
-
-    #search-button {
-        margin: auto;
-    }
-
-    .form {
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    nav {
-        margin: auto;
-    }
-
-    nav ul {
+    form.form{
         display: flex;
-        flex-direction: row;
-        justify-content: center;
         flex-wrap: nowrap;
+        flex-direction: row;
+        width: 700px;
+    }
+
+
+    #modo-oscuro{
         align-items: center;
+        justify-content: center;
     }
-
-    nav ul li {
-        font-size: 0.5rem;
-        margin: auto;
-        padding: 5px;
-        width: 70px;
-        height: 30px;
-    }
-
-    nav ul li a {
-        width: 30vw;
-    }
-
-    .header-section-nav {
-        width: 30vw;
-        margin: auto;
-    }
-
-    .header-section-form {
-        width: 30vw;
-        margin: 0;
-    }
-
-    #modo-oscuro {
-        width: 10vw;
-    }
-
+  
     .tituloCancion {
         width: 80vw;
         align-content: center;
@@ -826,5 +797,62 @@ h1 {
         margin: auto;
         margin-top: 20px;
     }
+    .cajaGeneros{
+        display: flex;
+        height: 1400px;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 10px 10px 10px 10px;
+        overflow: hidden;
+    }
+/*-----------------------------------PLAYLIST--------------------------------------------*/
+    #lista{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    .cajita-playlist{
+        display: flex;
+        flex-wrap: wrap;
+    }
+/*---------------------------------GENEROS-------------------------------------------------------*/
 
+.cajaGeneros {
+    display: flex;
+    height: auto;
+    width: auto;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px 10px 10px 10px;
+    overflow: hidden;
+}
+
+/*---------------------------------RESULTADOS--------------------------------------------------------------*/
+.detailGenero{
+    align-items: center;
+    margin: 0%;
+}
+/*-------------------------------------FOOTER-------------------------------------------------------------------*/
+footer{
+    width: 100%;
+    height: auto;
+}
+footer nav li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 5px 5px 5px 5px;
+}
+footer nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 }
